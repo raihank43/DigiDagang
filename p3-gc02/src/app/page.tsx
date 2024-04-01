@@ -6,32 +6,36 @@ export default function Home() {
     // Replace this with actual product data
     name: "Product Name",
     price: "Rp100.000",
-    image: "/path/to/image.jpg",
+    image:
+      "https://images.tokopedia.net/img/cache/200-square/VqbcmM/2022/6/2/201de609-0cb0-4210-b6fc-a559b588168c.png",
   });
 
   return (
     <>
       <Navbar />
       <div className="min-h-screen bg-gray-100">
-
         <header className="bg-indigo-600 text-white p-12 text-center">
-          <h2 className="text-4xl mb-4">Selamat datang di E-Shop!</h2>
+          <h2 className="text-4xl mb-4">Selamat datang di DigiDagang!</h2>
           <p>Temukan berbagai produk menarik di sini.</p>
         </header>
 
         <main className="p-6 space-y-8">
           <section>
-            <h3 className="text-2xl font-bold">Produk Unggulan</h3>
+            <h3 className="text-2xl font-bold text-blue-800">
+              Produk Unggulan
+            </h3>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-4">
               {products.map((product, index) => (
-                <div key={index} className="bg-white p-4 rounded-lg shadow">
+                <div key={index} className="bg-white p-4 rounded-lg shadow-lg">
                   <img
                     src={product.image}
                     alt={product.name}
                     className="w-full h-48 object-cover rounded"
                   />
-                  <h4 className="mt-4 font-bold">{product.name}</h4>
-                  <p className="mt-2">{product.price}</p>
+                  <h4 className="mt-4 font-bold text-neutral-950">
+                    {product.name}
+                  </h4>
+                  <p className="mt-2 text-lime-800">{product.price}</p>
                 </div>
               ))}
             </div>
