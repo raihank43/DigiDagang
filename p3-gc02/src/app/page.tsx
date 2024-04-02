@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import ProductCard from "@/components/ProductCard";
+import Carousel from "@/components/Carousel";
 
 export default function Home() {
   const products = Array(10).fill({
@@ -14,19 +15,17 @@ export default function Home() {
   return (
     <>
       <div className="min-h-screen bg-gray-100">
+        <Carousel />
         <header className="bg-indigo-600 text-white p-12 text-center">
           <h2 className="text-4xl mb-4">Selamat datang di DigiDagang!</h2>
           <p>Temukan berbagai produk menarik di sini.</p>
         </header>
-
         <main className="p-6 space-y-8">
           <section>
             <h3 className="text-2xl font-bold text-blue-800">
               Produk Unggulan
             </h3>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-4">
-
-            </div>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-4"></div>
             <div className="text-right mt-4">
               <a href="/products" className="text-indigo-600 hover:underline">
                 Lihat semua
