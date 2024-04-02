@@ -81,12 +81,12 @@ export default function Navbar() {
                 >
                   Kategori
                 </Link>
-                <a
-                  href="#"
+                <Link
+                  href={"/products"}
                   className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
                 >
                   Produk
-                </a>
+                </Link>
                 <Link
                   href="/about"
                   className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"

@@ -25,7 +25,7 @@ export default function Home() {
               Produk Unggulan
             </h3>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-4">
-              <ProductCard />
+
             </div>
             <div className="text-right mt-4">
               <a href="/products" className="text-indigo-600 hover:underline">
