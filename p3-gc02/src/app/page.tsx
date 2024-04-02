@@ -24,12 +24,12 @@ export default function Home() {
         </header>
         <main className="p-6 space-y-8">
           <section>
-            <h3 className="text-2xl font-bold text-blue-800">
-              Produk Unggulan
+            <h3 className="text-2xl font-bold text-blue-800 text-center">
+              {/* Produk Unggulan */}
             </h3>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-4"></div>
             {/* Featured Products */}
-            <section className="bg-white py-8">
+            <section className=" py-8">
               <div className="container mx-auto flex items-center flex-wrap pt-4 pb-12">
                 {products.map((el) => {
                   return <FeaturedCards />;

@@ -7,7 +7,7 @@ export default function FeaturedCards() {
       >
         <img
           className="transition-all transform group-hover:scale-110"
-          src="https://images.unsplash.com/photo-1555982105-d25af4182e4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&h=400&q=80"
+          src="https://loremflickr.com/cache/resized/defaultImage.small_400_400_nofilter.jpg"
         />
         <div className="p-4 bg-white">
           <p className="text-black text-lg font-bold transition-colors group-hover:text-indigo-500">
