@@ -16,7 +16,7 @@ export default function Home() {
     <>
       <div className="min-h-screen bg-gray-100">
         <Carousel />
-        <header className="bg-indigo-600 text-white p-12 text-center">
+        <header className="bg-indigo-600 text-white p-12 text-center border rounded-t-lg">
           <h2 className="text-4xl mb-4">Selamat datang di DigiDagang!</h2>
           <p>Temukan berbagai produk menarik di sini.</p>
         </header>

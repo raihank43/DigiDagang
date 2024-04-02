@@ -15,8 +15,8 @@ export default function ProductCard({ product }: ProductCardProps) {
         alt="nama produk"
         className="w-full h-48 object-cover rounded"
       />
-      <h4 className="mt-4 font-bold text-neutral-950">{product.name}</h4>
-      <p className="mt-2 text-lime-800">Rp.{product.price}</p>
+      <h4 className="mt-4 font-bold text-black">{product.name}</h4>
+      <p className="mt-2 text-green-800">Rp.{product.price}</p>
 
       <Link
         href={"/products/" + product.id}
