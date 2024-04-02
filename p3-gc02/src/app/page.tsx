@@ -1,5 +1,6 @@
 import React from "react";
 import Navbar from "../components/Navbar";
+import ProductCard from "@/components/ProductCard";
 
 export default function Home() {
   const products = Array(10).fill({
@@ -12,7 +13,6 @@ export default function Home() {
 
   return (
     <>
-      <Navbar />
       <div className="min-h-screen bg-gray-100">
         <header className="bg-indigo-600 text-white p-12 text-center">
           <h2 className="text-4xl mb-4">Selamat datang di DigiDagang!</h2>
@@ -25,19 +25,7 @@ export default function Home() {
               Produk Unggulan
             </h3>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-4">
-              {products.map((product, index) => (
-                <div key={index} className="bg-white p-4 rounded-lg shadow-lg">
-                  <img
-                    src={product.image}
-                    alt={product.name}
-                    className="w-full h-48 object-cover rounded"
-                  />
-                  <h4 className="mt-4 font-bold text-neutral-950">
-                    {product.name}
-                  </h4>
-                  <p className="mt-2 text-lime-800">{product.price}</p>
-                </div>
-              ))}
+              <ProductCard />
             </div>
             <div className="text-right mt-4">
               <a href="/products" className="text-indigo-600 hover:underline">
