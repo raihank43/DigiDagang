@@ -1,6 +1,7 @@
 "use client";
 import { useRouter } from "next/navigation";
 import { Product } from "../app/type";
+import Link from "next/link";
 
 type ProductCardProps = {
   product: Product;
@@ -16,12 +17,13 @@ export default function ProductCard({ product }: ProductCardProps) {
       />
       <h4 className="mt-4 font-bold text-neutral-950">{product.name}</h4>
       <p className="mt-2 text-lime-800">Rp.{product.price}</p>
-      <button
-        onClick={() => router.push("/products/" + product.id)}
+
+      <Link
+        href={"/products/" + product.id}
         className="bg-indigo-600 px-4 py-3 text-center text-sm font-semibold inline-block text-white cursor-pointer uppercase transition duration-200 ease-in-out round"
       >
-        See Details
-      </button>
+        See Detail
+      </Link>
     </div>
   );
 }
