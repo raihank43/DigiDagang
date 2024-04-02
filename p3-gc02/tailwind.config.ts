@@ -10,8 +10,8 @@ const config: Config = withMT({
   theme: {
     extend: {
       fontFamily: {
-        lexend: ["Lexend", "sans-serif"],
-        poppins: ["Poppins", "sans-serif"],
+        'lexend': ["Lexend", "sans-serif"],
+        'poppins': ["Poppins", "sans-serif"],
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
