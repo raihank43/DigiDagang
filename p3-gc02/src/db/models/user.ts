@@ -1,7 +1,7 @@
 import { ObjectId } from "mongodb";
 import { db } from "../config";
 
-type User = {
+type Users = {
     _id: ObjectId
     name: string
     email: string
@@ -10,7 +10,7 @@ type User = {
 
 export default class User {
   static userCollection() {
-    return db.collection<User>("users");
+    return db.collection<Users>("users");
   }
 
   static async findAll () {
