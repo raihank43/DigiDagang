@@ -1,15 +1,26 @@
 import { ObjectId } from "mongodb";
 import { db } from "../config";
+import bcryptjs from "bcryptjs";
+import { z } from "zod";
 
-type Users = {
-  _id: ObjectId;
-  name: string;
-  username: string;
-  email: string;
-  password: string;
-};
+// type Users = {
+//   _id: ObjectId;
+//   name: string;
+//   username: string;
+//   email: string;
+//   password: string;
+// };
 
-type NewUserInput = Users;
+// type NewUserInput = Users;
+
+const userSchema = z.object({
+  name: z.string().min(5),
+  email: z.string().email(),
+  username: z.string().min(5),
+  password: z.string().min(5),
+});
+
+type Users = z.infer<typeof userSchema>;
 
 export default class User {
   static userCollection() {
@@ -20,7 +31,14 @@ export default class User {
     return this.userCollection().find().toArray();
   }
 
-  static async create(newUser: NewUserInput) {
-    return await this.userCollection().insertOne(newUser);
+  static async create(newUser: Users) {
+    const newUserParsed = userSchema.parse(newUser);
+
+    console.log(newUserParsed);
+
+    return await this.userCollection().insertOne({
+      ...newUser,
+      password: await bcryptjs.hash(newUser.password, 10),
+    });
   }
 }
