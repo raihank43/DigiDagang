@@ -33,7 +33,7 @@ export default function Home() {
             <p>Temukan berbagai produk menarik di sini.</p>
           </div>
         </header>
-        <main className="p-6 space-y-8 mb-10 bg-[#EBF7FF] bg-gradient-to-b from-blue-400 to-white">
+        <main className="p-6 space-y-8 mb-10">
           <section>
             <h3 className="text-2xl font-bold text-blue-800 text-center"></h3>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-4"></div>
@@ -42,7 +42,7 @@ export default function Home() {
               <nav id="store" className="w-full z-30 top-0 px-6 py-1">
                 <div className="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 px-2 py-3">
                   <a
-                    className="uppercase tracking-wide no-underline hover:no-underline font-bold text-white text-xl "
+                    className="uppercase tracking-wide no-underline hover:no-underline font-bold text-black text-xl "
                     href="#"
                   >
                     Produk Unggulan
@@ -83,9 +83,9 @@ export default function Home() {
               </nav>
 
               {/* Featured Products */}
-              <div className="container mx-auto flex items-center flex-wrap pt-4 pb-12">
-                {products.map((el) => {
-                  return <FeaturedCards />;
+              <div className="container mx-auto flex overflow-x-scroll space-x-0 whitespace-nowrap pt-4 pb-12">
+                {products.map((el, index) => {
+                  return <FeaturedCards key={index} />;
                 })}
               </div>
             </section>
