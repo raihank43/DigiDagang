@@ -1,11 +1,10 @@
-
 import React, { useState } from "react";
 import Link from "next/link";
 import ProfileDropdown from "./ProfileDropDown";
 
 export default function Navbar() {
   return (
-    <nav className=" bg-gr">
+    <nav className=" z-50 bg-white shadow-lg">
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div className="relative flex h-16 items-center justify-between">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -59,49 +58,54 @@ export default function Navbar() {
             </button>
           </div>
           <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-            <div className="flex flex-shrink-0 items-center">
-              <img
-                className="h-8 w-auto"
-                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
-                alt="Your Company"
-              />
-              <h1 className="ml-8 font-bold">DigiDagang</h1>
-            </div>
             <div className="hidden sm:ml-6 sm:block">
               <div className="flex space-x-4">
                 {/* Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" */}
                 <Link
                   href={"/"}
-                  className="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium"
+                  className="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-bold"
                   aria-current="page"
                 >
                   Home
                 </Link>
                 <Link
                   href={"/wishlist"}
-                  className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                  className="text-black hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-bold"
                 >
                   Wishlist
                 </Link>
                 <Link
                   href={"/products"}
-                  className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                  className="text-black hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-bold"
                 >
                   Produk
                 </Link>
                 <Link
                   href="/about"
-                  className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                  className="text-black hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-bold"
                 >
                   About
                 </Link>
               </div>
             </div>
           </div>
-          <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+
+          <div className="flex flex-shrink-0 items-center">
+            {/* <img
+                className="h-8 w-auto"
+                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
+                alt="Your Company"
+              /> */}
+            <h1 className="ml-8 font-bold">
+              <span className=" italic text-2xl font-poppins-black text-indigo-600">Digi </span>
+              <span className=" font-extrabold font-poppins-bold text-orange-800">Dagang</span>
+            </h1>
+          </div>
+
+          <div className=" flex-1 absolute inset-y-0 right-0 flex justify-end items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
             <button
               type="button"
-              className="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+              className="relative rounded-full p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
             >
               <span className="absolute -inset-1.5" />
               <span className="sr-only">View notifications</span>

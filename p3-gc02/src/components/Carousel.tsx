@@ -4,10 +4,10 @@ import React from 'react'
 export default function Carousel() {
   return (
     <div
-      className="carousel relative container mx-auto p-8"
+      className="carousel relative container mx-auto mb-20 rounded-b-2xl shadow-lg"
       style={{ maxWidth: 1600 }}
     >
-      <div className="carousel-inner relative overflow-hidden w-full rounded-md shadow-lg">
+      <div className="carousel-inner relative overflow-hidden w-full rounded-b-2xl shadow-lg ">
         {/*Slide 1*/}
         <input
           className="carousel-open"

@@ -10,8 +10,13 @@ const config: Config = withMT({
   theme: {
     extend: {
       fontFamily: {
-        'lexend': ["Lexend", "sans-serif"],
-        'poppins': ["Poppins", "sans-serif"],
+        lexend: ["Lexend", "sans-serif"],
+        poppins: ["Poppins", "sans-serif"],
+        "poppins-regular": ['"Poppins-Regular"', "sans-serif"],
+        "poppins-black": ['"Poppins-Black"', "sans-serif"],
+        "poppins-black-italic": ['"Poppins-BlackItalic"', "sans-serif"],
+        "poppins-bold": ['"Poppins-Bold"', "sans-serif"],
+        "poppins-bold-italic": ['"Poppins-BoldItalic"', "sans-serif"],
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
@@ -20,6 +25,6 @@ const config: Config = withMT({
       },
     },
   },
-  plugins: [],
+  plugins: [require("daisyui")],
 });
 export default config;

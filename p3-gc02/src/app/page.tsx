@@ -4,6 +4,7 @@ import ProductCard from "@/components/ProductCard";
 import Carousel from "@/components/Carousel";
 import Link from "next/link";
 import FeaturedCards from "@/components/FeaturedCard";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   const products = Array(10).fill({
@@ -16,13 +17,23 @@ export default function Home() {
 
   return (
     <>
-      <div className="min-h-screen bg-gray-100">
+      <div className="min-h-screen bg-white">
         <Carousel />
-        <header className="bg-indigo-600 text-white p-12 text-center border rounded-t-lg">
-          <h2 className="text-4xl mb-4">Selamat datang di DigiDagang!</h2>
-          <p>Temukan berbagai produk menarik di sini.</p>
+        <header className="text-white p-12 text-center rounded-t-3xl bg-gradient-to-b from-blue-500 to-blue-400">
+          <div className="mt-5">
+            <h2 className="text-4xl mb-4">
+              Selamat datang di{" "}
+              <span className=" italic font-poppins-black text-indigo-600">
+                Digi{" "}
+              </span>
+              <span className=" font-extrabold font-poppins-bold text-orange-800">
+                Dagang
+              </span>
+            </h2>
+            <p>Temukan berbagai produk menarik di sini.</p>
+          </div>
         </header>
-        <main className="p-6 space-y-8">
+        <main className="p-6 space-y-8 mb-10 bg-[#EBF7FF] bg-gradient-to-b from-blue-400 to-white">
           <section>
             <h3 className="text-2xl font-bold text-blue-800 text-center"></h3>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-4"></div>
@@ -31,7 +42,7 @@ export default function Home() {
               <nav id="store" className="w-full z-30 top-0 px-6 py-1">
                 <div className="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 px-2 py-3">
                   <a
-                    className="uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl "
+                    className="uppercase tracking-wide no-underline hover:no-underline font-bold text-white text-xl "
                     href="#"
                   >
                     Produk Unggulan
@@ -85,10 +96,6 @@ export default function Home() {
             </div>
           </section>
         </main>
-
-        <footer className="bg-white p-6 shadow mt-8">
-          <p>© 2024 E-Shop. All rights reserved.</p>
-        </footer>
       </div>
     </>
   );
