@@ -1,6 +1,6 @@
 import ProductCard from "@/components/ProductCard";
 import { Product } from "../type";
-
+import SearchBar from "@/components/Search";
 async function fetchProducts(): Promise<Product[]> {
   const res = await fetch("http://localhost:3001/products");
 
@@ -12,13 +12,22 @@ async function fetchProducts(): Promise<Product[]> {
 }
 export default async function ProductsPage() {
   const products = await fetchProducts();
-//   console.log(products);
+  //   console.log(products);
   return (
-    <main className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-4 p-10">
-      <h1>Product page</h1>
-      {products.map((product) => {
-        return <ProductCard product={product} />;
-      })}
+    <main className="container">
+      <div>
+        <SearchBar />
+      </div>
+
+      <div className="container justify-center">
+        <h1>Product page</h1>
+      </div>
+
+      <div className="flex flex-wrap justify-center gap-10 items-center p-10">
+        {products.map((product, index) => {
+          return <ProductCard product={product} key={index} />;
+        })}
+      </div>
     </main>
   );
 }
