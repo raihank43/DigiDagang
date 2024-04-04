@@ -11,3 +11,15 @@ export type Product = {
   updatedAt: string;
   id: string;
 };
+
+export type LoginInput = {
+  email: string;
+  password: string;
+};
+
+export type MyResponse<T = null>  = {
+  message?: string;
+  data?: {
+    accessToken: string;
+  };
+};

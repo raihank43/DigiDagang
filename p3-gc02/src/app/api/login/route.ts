@@ -53,9 +53,9 @@ export async function POST(request: Request) {
       email: userByEmail.email,
     };
 
-    const accessToken = createToken(payload)
-  
-    console.log(accessToken)
+    const accessToken = createToken(payload);
+
+    // console.log(accessToken);
 
     return NextResponse.json(
       {
