@@ -41,4 +41,12 @@ export default class User {
       password: await bcryptjs.hash(newUser.password, 10),
     });
   }
+
+  static async getUserByEmail(email: string) {
+    const userCollection = this.userCollection();
+
+    const user = await userCollection.findOne({ email: email })
+
+    return user;
+  }
 }
