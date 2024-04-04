@@ -1,7 +1,7 @@
 "use server";
 
 import { redirect } from "next/navigation";
-import { LoginInput, MyResponse } from "./type";
+import { LoginInput, MyResponse } from "../type";
 import { toast } from "react-toastify";
 import { cookies } from "next/headers";
 

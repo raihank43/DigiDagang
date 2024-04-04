@@ -1,4 +1,5 @@
 "use client";
+import { LogoutAction } from "@/app/actions/auth";
 import { useState, useEffect, useRef } from "react";
 
 export default function ProfileDropdown() {
@@ -69,7 +70,10 @@ export default function ProfileDropdown() {
             Settings
           </a>
           <a
-            href="#"
+            onClick={async () => {
+              setIsOpen(false)
+              LogoutAction();
+            }}
             className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
             role="menuitem"
             tabIndex={-1}

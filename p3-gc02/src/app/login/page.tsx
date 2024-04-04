@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
-import { loginServerAction } from "../action";
+import { loginServerAction } from "../actions/loginAction";
 import { LoginInput } from "../type";
 import { toast } from "react-toastify";
 import { useSearchParams } from "next/navigation";
