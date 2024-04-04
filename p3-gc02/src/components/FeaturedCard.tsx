@@ -3,7 +3,7 @@ export default function FeaturedCards() {
     <div className="xl:w-1/4 md:w-1/3 flex flex-shrink-0 items-center">
       <a
         href="#"
-        className="group rounded-lg shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500 ease-in-out transform hover:scale-105 hover:shadow-lg"
+        className="group rounded-lg shadow-lg overflow-hidden transition-all duration-500 ease-in-out transform hover:scale-105 hover:shadow-lg"
       >
         <div className="relative">
           <img

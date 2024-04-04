@@ -97,8 +97,8 @@ export default function Navbar() {
                 alt="Your Company"
               /> */}
             <h1 className="ml-8 font-bold">
-              <span className=" italic text-2xl font-poppins-black text-indigo-600">Digi </span>
-              <span className=" font-extrabold font-poppins-bold text-orange-800">Dagang</span>
+              <span className=" italic text-2xl font-poppins-black text-indigo-500">Digi </span>
+              <span className=" font-extrabold font-poppins-bold text-orange-600">Dagang</span>
             </h1>
           </div>
 

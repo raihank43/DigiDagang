@@ -23,10 +23,10 @@ export default function Home() {
           <div className="mt-5">
             <h2 className="text-4xl mb-4">
               Selamat datang di{" "}
-              <span className=" italic font-poppins-black text-indigo-600">
+              <span className=" italic font-poppins-black text-indigo-500">
                 Digi{" "}
               </span>
-              <span className=" font-extrabold font-poppins-bold text-orange-800">
+              <span className=" font-extrabold font-poppins-bold text-orange-600">
                 Dagang
               </span>
             </h2>

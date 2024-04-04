@@ -1,89 +1,73 @@
-import React from "react";
+"use client";
+import Link from "next/link";
+import React, { useState } from "react";
 
 export default function Register() {
-  return (
-    <div className="min-h-screen bg-gradient-to-r animate-gradient-x from-purple-400 via-pink-500 to-red-500 bg-opacity-25 backdrop-blur-md flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl w-full flex">
-        <div className="w-1/2 flex items-center justify-center">
-          <div className="text-center">
-            <h2 className="text-4xl font-extrabold text-white">
-              Welcome to E-Shop
-            </h2>
-            <p className="mt-2 text-lg text-white">Silahkan daftar</p>
-          </div>
-        </div>
-        <div className="w-1/2 bg-white p-6 rounded-lg shadow-lg space-y-8">
-          <form className="mt-8 space-y-6" action="#" method="POST">
-            <div className="rounded-md shadow-sm space-y-4">
-              <div>
-                <label htmlFor="name" className="sr-only">
-                  Name
-                </label>
-                <input
-                  id="name"
-                  name="name"
-                  type="text"
-                  autoComplete="name"
-                  required
-                  className="appearance-none relative block w-full px-3 py-2 border-b border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
-                  placeholder="Name"
-                />
-              </div>
-              <div>
-                <label htmlFor="username" className="sr-only">
-                  Username
-                </label>
-                <input
-                  id="username"
-                  name="username"
-                  type="text"
-                  autoComplete="username"
-                  required
-                  className="appearance-none relative block w-full px-3 py-2 border-b border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
-                  placeholder="Username"
-                />
-              </div>
-              <div>
-                <label htmlFor="email-address" className="sr-only">
-                  Email address
-                </label>
-                <input
-                  id="email-address"
-                  name="email"
-                  type="email"
-                  autoComplete="email"
-                  required
-                  className="appearance-none relative block w-full px-3 py-2 border-b border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
-                  placeholder="Email address"
-                />
-              </div>
-              <div>
-                <label htmlFor="password" className="sr-only">
-                  Password
-                </label>
-                <input
-                  id="password"
-                  name="password"
-                  type="password"
-                  autoComplete="current-password"
-                  required
-                  className="appearance-none relative block w-full px-3 py-2 border-b border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
-                  placeholder="Password"
-                />
-              </div>
-            </div>
+  const [show, setShow] = useState(true);
 
-            <div>
+  return (
+    <>
+      <div className="bg-purple flex items-center justify-center h-screen bg-gradient-to-br from-blue-600 to-blue-900">
+        <div className="w-full max-w-md space-y-3 rounded-2xl bg-white shadow-lg p-12 transform transition duration-1000 hover:scale-110">
+          <h2 className="text-2xl font-bold text-center text-gray-700">
+            Create Account
+          </h2>
+          <p className="text-gray-400 text-center">
+            Sudah punya akun?{" "}
+            <Link
+              href="/login"
+              className="text-sm text-blue-700 hover:text-orange-700"
+            >
+              Sign in
+            </Link>
+          </p>
+          <div className="space-y-4">
+            <input
+              className="w-full px-4 bg-white py-2 border rounded-lg focus:outline-none focus:border-blue-500"
+              type="text"
+              placeholder="Full Name"
+            />
+            <input
+              className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500 bg-white"
+              type="text"
+              placeholder="Email"
+            />
+            <input
+              className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500 bg-white"
+              type="text"
+              placeholder="Username"
+            />
+            <div className="relative">
+              <input
+                className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500 bg-white"
+                type={show ? "password" : "text"}
+                placeholder="Password"
+              />
               <button
-                type="submit"
-                className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                onClick={() => setShow(!show)}
+                className="absolute inset-y-0 right-0 flex items-center pr-3"
               >
-                Daftar
+                <svg
+                  className="w-5 h-5 text-gray-400"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  {/* Eye Icon */}
+                </svg>
               </button>
             </div>
-          </form>
+          </div>
+          <button className="w-full px-4 py-2 mt-4 text-white bg-blue-600 rounded-lg hover:bg-blue-700">
+            Sign Up
+          </button>
+          <p className="text-xs text-center text-black">
+            By signing up, you agree to our Terms, Data Policy and Cookies
+            Policy.
+          </p>
         </div>
       </div>
-    </div>
+    </>
   );
 }
