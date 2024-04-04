@@ -4,25 +4,26 @@ import React, { useEffect, useState } from "react";
 import { loginServerAction } from "../actions/loginAction";
 import { LoginInput } from "../type";
 import { toast } from "react-toastify";
-import { useSearchParams } from "next/navigation";
+import { redirect, useSearchParams } from "next/navigation";
 
 export default function Login() {
   let [show, setShow] = useState(true);
   const searchParams = useSearchParams();
-  const errorMessage = searchParams.get("error");
+  let errorMessage = searchParams.get("error");
 
 
   const handleSubmit = async (formData: FormData) => {
-    // Handle the search term as you wish
 
     const rawFormData = {
       email: formData.get("email"),
       password: formData.get("password"),
     } as LoginInput;
 
+
     await loginServerAction(rawFormData);
     if (errorMessage) {
       toast.error(errorMessage);
+      errorMessage = null
     }
   };
 

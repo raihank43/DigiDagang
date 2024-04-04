@@ -17,7 +17,15 @@ export type LoginInput = {
   password: string;
 };
 
-export type MyResponse<T = null>  = {
+export type RegisterInput = {
+  name: string;
+  email: string;
+  username: string;
+  password: string;
+};
+
+export type MyResponse<T = null> = {
+  error?: string,
   message?: string;
   data?: {
     accessToken: string;

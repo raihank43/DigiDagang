@@ -1,9 +1,34 @@
 "use client";
 import Link from "next/link";
 import React, { useState } from "react";
+import { RegisterInput } from "../type";
+import { RegisterAction } from "../actions/registerAction";
+import { useSearchParams } from "next/navigation";
+import { toast } from "react-toastify";
 
 export default function Register() {
   const [show, setShow] = useState(true);
+  const searchParams = useSearchParams()
+  let errorMessage = searchParams.get('error')
+
+  const handleRegisterSubmit = async (formdata: FormData) => {
+    const rawFormData = {
+      name: formdata.get("name"),
+      email: formdata.get("email"),
+      username: formdata.get("username"),
+      password: formdata.get("password"),
+    } as RegisterInput;
+
+    await RegisterAction(rawFormData)
+
+    if (errorMessage) {
+      toast.error(errorMessage)
+      errorMessage = null
+
+    }
+
+
+  };
 
   return (
     <>
@@ -21,27 +46,31 @@ export default function Register() {
               Sign in
             </Link>
           </p>
-          <div className="space-y-4">
+          <form className="space-y-4" action={handleRegisterSubmit}>
             <input
               className="w-full px-4 bg-white py-2 border rounded-lg focus:outline-none focus:border-blue-500"
               type="text"
               placeholder="Full Name"
+              name="name"
             />
             <input
               className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500 bg-white"
               type="text"
               placeholder="Email"
+              name="email"
             />
             <input
               className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500 bg-white"
               type="text"
               placeholder="Username"
+              name="username"
             />
             <div className="relative">
               <input
                 className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500 bg-white"
                 type={show ? "password" : "text"}
                 placeholder="Password"
+                name="password"
               />
               <button
                 onClick={() => setShow(!show)}
@@ -58,10 +87,11 @@ export default function Register() {
                 </svg>
               </button>
             </div>
-          </div>
-          <button className="w-full px-4 py-2 mt-4 text-white bg-blue-600 rounded-lg hover:bg-blue-700">
-            Sign Up
-          </button>
+
+            <button className="w-full px-4 py-2 mt-4 text-white bg-blue-600 rounded-lg hover:bg-blue-700">
+              Sign Up
+            </button>
+          </form>
           <p className="text-xs text-center text-black">
             By signing up, you agree to our Terms, Data Policy and Cookies
             Policy.
