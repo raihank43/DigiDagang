@@ -27,5 +27,5 @@ export type RegisterInput = {
 export type MyResponse<T = null> = {
   error?: string;
   message?: string;
-  data?: T;
+  data: T;
 };

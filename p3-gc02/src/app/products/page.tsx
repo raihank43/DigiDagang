@@ -3,19 +3,34 @@
 import ProductCard from "@/components/ProductCard";
 import { MyResponse, Product } from "../type";
 import SearchBar from "@/components/Search";
-async function fetchProducts(): Promise<Product[]> {
-  const res = await fetch("http://localhost:3000/api/products");
+import { useEffect, useState } from "react";
 
-  if (!res.ok) {
-    // this will activate the closest `error.js` error boundary
-    throw new Error("Failed to fetch data");
-  }
-  const result = await res.json()
-  return result.data
-}
-export default async function ProductsPage() {
-  const products = await fetchProducts();
-  // console.log(products);
+type resultProp = {
+  data: Product[];
+};
+
+export default function ProductsPage() {
+  const [products, setProducts] = useState<Product[]>([]);
+
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const res = await fetch("http://localhost:3000/api/products");
+
+        if (!res.ok) {
+          // this will activate the closest `error.js` error boundary
+          throw new Error("Failed to fetch data");
+        }
+        const result = (await res.json()) as resultProp
+        setProducts(result.data);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
+    fetchProducts();
+  }, []);
+
   return (
     <main className="container">
       <div>

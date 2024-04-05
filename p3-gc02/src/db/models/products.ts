@@ -25,4 +25,12 @@ export default class ProductModel {
   static async findAll() {
     return this.productCollection().find().toArray();
   }
+
+  static async findProductBySlug(slug: string) {
+    const productCollection = this.productCollection();
+
+    const findProduct = await productCollection.findOne({ slug });
+
+    return findProduct;
+  }
 }
