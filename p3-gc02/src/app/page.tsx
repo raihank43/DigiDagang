@@ -5,16 +5,22 @@ import Carousel from "@/components/Carousel";
 import Link from "next/link";
 import FeaturedCards from "@/components/FeaturedCard";
 import Footer from "@/components/Footer";
+import { MyResponse, Product } from "./type";
 
-export default function Home() {
-  const products = Array(10).fill({
-    // Replace this with actual product data
-    name: "Product Name",
-    price: "Rp100.000",
-    image:
-      "https://images.tokopedia.net/img/cache/200-square/VqbcmM/2022/6/2/201de609-0cb0-4210-b6fc-a559b588168c.png",
-  });
+async function fetchFeaturedProducts() {
+  const res = await fetch("http://localhost:3000/api/featuredProducts");
 
+  if (!res.ok) {
+    throw new Error("Something went wrong");
+  }
+
+  const result = (await res.json()) as MyResponse<Product[]>;
+
+  return result.data;
+}
+
+export default async function Home() {
+  const products = await fetchFeaturedProducts()
   return (
     <>
       <div className="min-h-screen bg-white">
@@ -85,7 +91,7 @@ export default function Home() {
               {/* Featured Products */}
               <div className="container mx-auto flex overflow-x-scroll space-x-0 whitespace-nowrap pt-4 pb-12">
                 {products.map((el, index) => {
-                  return <FeaturedCards key={index} />;
+                  return <FeaturedCards key={index} product={el} />;
                 })}
               </div>
             </section>

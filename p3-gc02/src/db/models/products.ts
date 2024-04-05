@@ -33,4 +33,23 @@ export default class ProductModel {
 
     return findProduct;
   }
+
+  static async featuredProducts() {
+    const productCollection = this.productCollection();
+
+    const featuredProducts = await productCollection
+      .aggregate([
+        {
+          $limit: 10,
+        },
+        {
+          $sort: {
+            price: 1,
+          },
+        },
+      ])
+      .toArray();
+
+      return featuredProducts
+  }
 }

@@ -1,15 +1,18 @@
-export default function FeaturedCards() {
+"use client";
+
+import { Product } from "@/app/type";
+import Link from "next/link";
+
+export default function FeaturedCards({ product }: { product: Product }) {
+
   return (
     <div className="xl:w-1/4 md:w-1/3 flex flex-shrink-0 items-center">
-      <a
-        href="#"
+      <Link
+        href={"/products/" + product.slug}
         className="group rounded-lg shadow-lg overflow-hidden transition-all duration-500 ease-in-out transform hover:scale-105 hover:shadow-lg"
       >
         <div className="relative">
-          <img
-            className="w-full h-64 object-cover"
-            src="https://loremflickr.com/cache/resized/defaultImage.small_400_400_nofilter.jpg"
-          />
+          <img className="w-full h-64 object-cover" src={product.images[0]} />
           <svg
             id="wishlist-icon"
             className="h-6 w-6 fill-current text-gray-500 transition-colors group-hover:text-black absolute top-2 right-2"
@@ -21,10 +24,10 @@ export default function FeaturedCards() {
         </div>
         <div className="p-4 bg-white">
           <p className="text-black text-lg font-bold transition-colors group-hover:text-indigo-500">
-            Product Name
+            {product.name}
           </p>
           <p className="pt-2 text-gray-900 transition-colors group-hover:text-indigo-500">
-            £9.99
+            {product.price}
           </p>
         </div>
         <div className="p-4 bg-gray-100 flex justify-between items-center">
@@ -32,7 +35,7 @@ export default function FeaturedCards() {
             Add to Cart
           </p>
         </div>
-      </a>
+      </Link>
     </div>
   );
 }
