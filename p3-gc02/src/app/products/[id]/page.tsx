@@ -10,7 +10,10 @@ type ProductDetailProps = {
 
 async function fetchProductById(id: string): Promise<Product> {
   const res = await fetch("http://localhost:3001/products/" + id);
-  if (!res.ok) throw new Error("Something went wrong!");
+  if (!res.ok) {
+    console.log('masukkk')
+    throw new Error("Something went wrong!");
+  } 
 
   return res.json();
 }

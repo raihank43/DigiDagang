@@ -1,18 +1,21 @@
+"use client";
+
 import ProductCard from "@/components/ProductCard";
-import { Product } from "../type";
+import { MyResponse, Product } from "../type";
 import SearchBar from "@/components/Search";
 async function fetchProducts(): Promise<Product[]> {
-  const res = await fetch("http://localhost:3001/products");
+  const res = await fetch("http://localhost:3000/api/products");
 
   if (!res.ok) {
     // this will activate the closest `error.js` error boundary
     throw new Error("Failed to fetch data");
   }
-  return res.json();
+  const result = await res.json()
+  return result.data
 }
 export default async function ProductsPage() {
   const products = await fetchProducts();
-  //   console.log(products);
+  // console.log(products);
   return (
     <main className="container">
       <div>
