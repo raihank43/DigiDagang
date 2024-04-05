@@ -5,10 +5,6 @@ import { MyResponse, Product } from "../type";
 import SearchBar from "@/components/Search";
 import { useEffect, useState } from "react";
 
-type resultProp = {
-  data: Product[];
-};
-
 export default function ProductsPage() {
   const [products, setProducts] = useState<Product[]>([]);
 
@@ -21,7 +17,7 @@ export default function ProductsPage() {
           // this will activate the closest `error.js` error boundary
           throw new Error("Failed to fetch data");
         }
-        const result = (await res.json()) as resultProp
+        const result = (await res.json()) as MyResponse<Product[]>
         setProducts(result.data);
       } catch (error) {
         console.log(error);

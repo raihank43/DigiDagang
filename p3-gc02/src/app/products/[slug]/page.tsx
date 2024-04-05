@@ -1,31 +1,32 @@
 import ProductCard from "@/components/ProductCard";
-import { Product } from "@/app/type";
+import { MyResponse, Product } from "@/app/type";
 import Script from "next/script";
+import ProductDetailCarousel from "@/components/ProductDetailCarousel";
 
 type ProductDetailProps = {
   params: {
-    id: string;
+    slug: string;
   };
 };
 
-async function fetchProductById(id: string): Promise<Product> {
-  const res = await fetch("http://localhost:3001/products/" + id);
+async function getDataBySlug(slug: string) {
+  const res = await fetch("http://localhost:3000/api/products/" + slug);
   if (!res.ok) {
-    console.log('masukkk')
+    console.log("masukkk");
     throw new Error("Something went wrong!");
-  } 
+  }
+  const result = (await res.json()) as MyResponse<Product>;
 
-  return res.json();
+  return result;
 }
+
 export default async function ProductDetailPage({
   params,
 }: ProductDetailProps) {
-  console.log(params, "<<<<<<params"); //{ id: '1' } <<<<<< params
+  const product = await getDataBySlug(params.slug);
 
-  const product = await fetchProductById(params.id);
   return (
     <>
-      <Script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.7.3/dist/alpine.min.js"></Script>
       <div className="bg-white h-screen pt-10">
         {/* Breadcrumbs */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -77,31 +78,19 @@ export default async function ProductDetailPage({
             <div className="md:flex-1 px-4">
               <div x-data="{ image: 1 }" x-cloak="">
                 <div className="h-64 md:h-80 rounded-lg bg-gray-100 mb-4">
-                  <div
+                  {/* <div
                     x-show=""
                     className="h-64 md:h-80 rounded-lg bg-gray-100 mb-4 flex items-center justify-center"
-                    style={{ backgroundImage: `url(${product.images[0]})` }}
+                    style={{
+                      backgroundImage: `url(${product.data.images[0]})`,
+                    }}
                   >
                     <span className="text-5xl">1</span>
-                  </div>
-                  <div
-                    x-show="image === 2"
-                    className="h-64 md:h-80 rounded-lg bg-gray-100 mb-4 flex items-center justify-center"
-                  >
-                    <span className="text-5xl">2</span>
-                  </div>
-                  <div
-                    x-show="image === 3"
-                    className="h-64 md:h-80 rounded-lg bg-gray-100 mb-4 flex items-center justify-center"
-                  >
-                    <span className="text-5xl">3</span>
-                  </div>
-                  <div
-                    x-show="image === 4"
-                    className="h-64 md:h-80 rounded-lg bg-gray-100 mb-4 flex items-center justify-center"
-                  >
-                    <span className="text-5xl">4</span>
-                  </div>
+                  </div> */}
+
+                  <ProductDetailCarousel  images={product.data.images}/>
+  
+                
                 </div>
                 <div className="flex -mx-2 mb-4">
                   <template x-for="i in 4" />
@@ -110,7 +99,7 @@ export default async function ProductDetailPage({
             </div>
             <div className="md:flex-1 px-4">
               <h2 className="mb-2 leading-tight tracking-tight font-bold text-gray-800 text-2xl md:text-3xl">
-                {product.name}{" "}
+                {product.data.name}{" "}
               </h2>
               <p className="text-gray-500 text-sm">
                 By{" "}
@@ -121,9 +110,9 @@ export default async function ProductDetailPage({
               <div className="flex items-center space-x-4 my-4">
                 <div>
                   <div className="rounded-lg bg-gray-100 flex py-2 px-3">
-                    <span className="text-indigo-400 mr-1 mt-1">$</span>
+                    <span className="text-indigo-400 mr-1 mt-1">Rp</span>
                     <span className="font-bold text-indigo-600 text-3xl">
-                      25
+                      {product.data.price}
                     </span>
                   </div>
                 </div>
@@ -136,7 +125,7 @@ export default async function ProductDetailPage({
                   </p>
                 </div>
               </div>
-              <p className="text-gray-500">{product.description}</p>
+              <p className="text-gray-500">{product.data.description}</p>
               <div className="flex py-4 space-x-4">
                 <div className="relative">
                   <div className="text-center left-0 pt-2 right-0 absolute block text-xs uppercase text-gray-400 tracking-wide font-semibold">

@@ -19,7 +19,7 @@ export default function ProductCard({ product }: ProductCardProps) {
       <p className="mt-2 text-green-800">Rp.{product.price}</p>
 
       <Link
-        href={"/products/" + product.id}
+        href={"/products/" + product.slug}
         className="bg-indigo-600 px-4 py-3 text-center text-sm font-semibold inline-block text-white cursor-pointer uppercase transition duration-200 ease-in-out round"
       >
         See Detail
