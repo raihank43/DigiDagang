@@ -7,11 +7,10 @@ export async function GET(request: NextRequest) {
     const searchParams = request.nextUrl.searchParams;
     const page = searchParams.get("page") || "1";
 
+
     //handling pagination
     const limit = 4; // menentukan seberapa banyak data yang ingin ditampilkan pada setiap page
     const skip = page == "1" ? 0 : Number(page) * limit - limit;
-
-    console.log({ limit, skip, page });
 
     const response = await ProductModel.findAll(skip, limit);
 

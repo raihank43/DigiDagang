@@ -13,6 +13,40 @@ export default function ProductsPage() {
   const [stateHasMore, setStatehasMore] = useState(true);
   const [currentPage, setCurrentPage] = useState(0);
 
+  const [searchTerm, setSearchTerm] = useState("");
+
+  const handleSearchChange = async (
+    event: React.ChangeEvent<HTMLInputElement>
+  ) => {
+    setSearchTerm(event.target.value);
+  };
+
+  const fetchSearchProducts = async () => {
+    try {
+      const res = await fetch(
+        "http://localhost:3000/api/search-products?search=" + searchTerm
+      );
+
+      if (!res.ok) {
+        // this will activate the closest `error.js` error boundary
+        throw new Error("Failed to fetch data");
+      }
+
+      const result = (await res.json()) as MyResponse<Product[]>;
+      setProducts(result.data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const handleSearchSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    // Handle the search term as you wish
+    console.log(`User searched for ${searchTerm}`);
+  };
+
+  console.log(searchTerm);
+
   const fetchProducts = async () => {
     try {
       const res = await fetch(
@@ -24,8 +58,6 @@ export default function ProductsPage() {
         throw new Error("Failed to fetch data");
       }
       const result = (await res.json()) as MyResponse<Product[]>;
-
-      console.log(result);
 
       const hasMore = result.hasMore as boolean;
       const dataCurrentPage = result.currentPage as number;
@@ -43,6 +75,9 @@ export default function ProductsPage() {
     fetchProducts();
   }, []);
 
+  useEffect(() => {
+    fetchSearchProducts();
+  }, [searchTerm]);
   return (
     <>
       <div className="mt-0 mx-auto px-4 bg-white rounded-lg">
@@ -50,7 +85,7 @@ export default function ProductsPage() {
           <h1 className="text-2xl font-bold text-center my-6">All Products</h1>
 
           <div className=" border-solid border-black duration-500 ease-in-out hover:grow">
-            <SearchBar />
+            <SearchBar handleSearchChange={handleSearchChange} />
           </div>
         </div>
 
@@ -63,7 +98,7 @@ export default function ProductsPage() {
         <InfiniteScroll
           dataLength={products.length} //This is important field to render the next data
           next={fetchProducts}
-          className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 my-6 p-6"
+          className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 my-6 p-6 overflow-auto"
           hasMore={stateHasMore}
           loader={
             <div className="col-span-full h-screen flex justify-center items-center bg-white">

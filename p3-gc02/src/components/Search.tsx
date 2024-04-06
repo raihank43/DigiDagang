@@ -1,18 +1,13 @@
 "use client";
 import { useState } from "react";
+import { Product } from "../app/type";
 
-export default function SearchBar() {
-  const [searchTerm, setSearchTerm] = useState("");
+interface SearchBarProps {
+  handleSearchChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+}
 
-  const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setSearchTerm(event.target.value);
-  };
-
-  const handleSearchSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    // Handle the search term as you wish
-    console.log(`User searched for ${searchTerm}`);
-  };
+export default function SearchBar({ handleSearchChange }: SearchBarProps) {
+ 
 
   return (
     <div className="max-w-2xl mx-auto">
@@ -45,6 +40,7 @@ export default function SearchBar() {
             id="default-search"
             className="block p-4 pl-10 w-full text-sm text-black placeholder:text-white duration-500 ease-in-out bg-white border border-gray-300 focus:ring-blue-500 focus:border-blue-500   dark:focus:ring-blue-500 dark:focus:border-blue-500 hover:placeholder:text-gray-500 rounded-full drop-shadow-xl"
             placeholder="Search Products..."
+            onChange={handleSearchChange}
           />
           <button
             type="submit"

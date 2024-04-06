@@ -71,6 +71,12 @@ export default class ProductModel {
     return result;
   }
 
+  static async findProductByName(search: string) {
+    return this.productCollection().find({
+      name: { $regex: search, $options: "i" },
+    }).toArray()
+  }
+
   static async findProductBySlug(slug: string) {
     const productCollection = this.productCollection();
 
