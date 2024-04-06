@@ -2,6 +2,7 @@ import ProductCard from "@/components/ProductCard";
 import { MyResponse, Product } from "@/app/type";
 import Script from "next/script";
 import ProductDetailCarousel from "@/components/ProductDetailCarousel";
+import formatRupiah from "@/app/utils/toRupiahFormat";
 
 type ProductDetailProps = {
   params: {
@@ -110,9 +111,9 @@ export default async function ProductDetailPage({
               <div className="flex items-center space-x-4 my-4">
                 <div>
                   <div className="rounded-lg bg-gray-100 flex py-2 px-3">
-                    <span className="text-indigo-400 mr-1 mt-1">Rp</span>
+                    <span className="text-indigo-400 mr-1 mt-1"></span>
                     <span className="font-bold text-indigo-600 text-3xl">
-                      {product.data.price}
+                      {formatRupiah(product.data.price)}
                     </span>
                   </div>
                 </div>

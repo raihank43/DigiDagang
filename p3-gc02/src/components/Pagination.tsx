@@ -2,11 +2,11 @@
 export default function Pagination() {
   return (
     <nav aria-label="Page navigation example">
-      <ul className="inline-flex -space-x-px">
+      <ul className="inline-flex -space-x-px gap-2">
         <li>
           <a
             href="#"
-            className="bg-white border border-gray-300 text-gray-500 hover:bg-gray-100 hover:text-gray-700 ml-0 rounded-l-lg leading-tight py-2 px-3 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+            className="bg-blue-500 text-white hover:bg-blue-700 ml-0 rounded-l-lg leading-tight py-2 px-3 shadow-lg"
           >
             Previous
           </a>
@@ -14,7 +14,7 @@ export default function Pagination() {
         <li>
           <a
             href="#"
-            className="bg-white border border-gray-300 text-gray-500 hover:bg-gray-100 hover:text-gray-700 leading-tight py-2 px-3 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+            className="bg-white border border-blue-500 text-blue-500 hover:bg-blue-100 hover:text-blue-700 leading-tight py-2 px-3 shadow-lg"
           >
             1
           </a>
@@ -22,7 +22,7 @@ export default function Pagination() {
         <li>
           <a
             href="#"
-            className="bg-white border border-gray-300 text-gray-500 hover:bg-gray-100 hover:text-gray-700 leading-tight py-2 px-3 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+            className="bg-white border border-blue-500 text-blue-500 hover:bg-blue-100 hover:text-blue-700 leading-tight py-2 px-3"
           >
             2
           </a>
@@ -31,7 +31,7 @@ export default function Pagination() {
           <a
             href="#"
             aria-current="page"
-            className="bg-blue-50 border border-gray-300 text-blue-600 hover:bg-blue-100 hover:text-blue-700  py-2 px-3 dark:border-gray-700 dark:bg-gray-700 dark:text-white"
+            className="bg-blue-500 text-white hover:bg-blue-700 py-2 px-3"
           >
             3
           </a>
@@ -39,7 +39,7 @@ export default function Pagination() {
         <li>
           <a
             href="#"
-            className="bg-white border border-gray-300 text-gray-500 hover:bg-gray-100 hover:text-gray-700 leading-tight py-2 px-3 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+            className="bg-white border border-blue-500 text-blue-500 hover:bg-blue-100 hover:text-blue-700 leading-tight py-2 px-3"
           >
             4
           </a>
@@ -47,7 +47,7 @@ export default function Pagination() {
         <li>
           <a
             href="#"
-            className="bg-white border border-gray-300 text-gray-500 hover:bg-gray-100 hover:text-gray-700 leading-tight py-2 px-3 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+            className="bg-white border border-blue-500 text-blue-500 hover:bg-blue-100 hover:text-blue-700 leading-tight py-2 px-3"
           >
             5
           </a>
@@ -55,7 +55,7 @@ export default function Pagination() {
         <li>
           <a
             href="#"
-            className="bg-white border border-gray-300 text-gray-500 hover:bg-gray-100 hover:text-gray-700 rounded-r-lg leading-tight py-2 px-3 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+            className="bg-blue-500 text-white hover:bg-blue-700 rounded-r-lg leading-tight py-2 px-3"
           >
             Next
           </a>
