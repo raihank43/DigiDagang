@@ -7,7 +7,6 @@ export async function GET(request: NextRequest) {
     const searchParams = request.nextUrl.searchParams;
     const page = searchParams.get("page") || "1";
 
-
     //handling pagination
     const limit = 4; // menentukan seberapa banyak data yang ingin ditampilkan pada setiap page
     const skip = page == "1" ? 0 : Number(page) * limit - limit;
@@ -18,6 +17,12 @@ export async function GET(request: NextRequest) {
     const totalAllProducts = response.countProducts;
 
     // console.log(totalAllProducts)
+
+    console.log(request.headers.get("x-user-id"), "<<<< user id di route");
+    console.log(
+      request.headers.get("x-user-email"),
+      "<<<< user email di route"
+    );
 
     return NextResponse.json<MyResponse<Product[]>>(
       {

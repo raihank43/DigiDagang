@@ -1,6 +1,7 @@
 import { createToken } from "@/app/lib/jwt";
 import User from "@/db/models/user";
 import { compareTextWithHash } from "@/db/utils/bcryptjs";
+import { cookies } from "next/headers";
 import { NextResponse } from "next/server";
 import { z } from "zod";
 
@@ -49,11 +50,13 @@ export async function POST(request: Request) {
 
     // creating token
     const payload = {
-      id: userByEmail._id,
+      _id: userByEmail._id,
       email: userByEmail.email,
     };
 
     const accessToken = createToken(payload);
+
+    cookies().set('Authorization', `Bearer ${accessToken}`)
 
     // console.log(accessToken);
 
