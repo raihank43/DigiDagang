@@ -30,11 +30,20 @@ export default function ProductsPage() {
 
   return (
     <>
-      <div className="container mx-auto px-4">
-        <h1 className="text-2xl font-bold text-center my-6">All Products</h1>
+      <div className="mt-0 mx-auto px-4 bg-white rounded-lg">
+        <div className="flex flex-row justify-between items-center p-8">
+          <h1 className="text-2xl font-bold text-center my-6">
+            All Products
+          </h1>
 
-        {/* Search Bar */}
-        <SearchBar />
+          <div className=" border-solid border-black duration-500 ease-in-out hover:grow">
+            <SearchBar />
+          </div>
+        </div>
+
+        <div className="flex justify-center mt-5">
+          <Pagination />
+        </div>
 
         {/* Products Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 my-6 p-6">
