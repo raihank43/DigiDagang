@@ -1,5 +1,7 @@
 import { z } from "zod";
 import { db } from "../config";
+import { ObjectId } from "mongodb";
+import { MyResponse } from "@/app/type";
 
 const productSchema = z.object({});
 
@@ -17,13 +19,56 @@ type Product = {
   id: string;
 };
 
+interface Pagination {
+  data: Product[];
+  currentPage: number;
+  currentData: number;
+  totalData: number;
+  totalPage: number;
+}
+
+type countProduct = {
+  count: number;
+};
+
 export default class ProductModel {
   static productCollection() {
     return db.collection<Product>("products");
   }
 
-  static async findAll() {
-    return this.productCollection().find().toArray();
+  static async findAll(skip: number, limit: number) {
+    const products = (await this.productCollection()
+      .aggregate([
+        {
+          $skip:
+            /**
+             * Provide the number of documents to skip.
+             */
+            skip,
+        },
+        {
+          $limit:
+            /**
+             * Provide the number of documents to limit.
+             */
+            limit,
+        },
+      ])
+      .toArray()) as Product[];
+
+    const countProducts = (await this.productCollection()
+      .aggregate([
+        {
+          $count: "count",
+        },
+      ])
+      .toArray()) as countProduct[];
+
+    const result = {
+      products,
+      countProducts: countProducts[0].count,
+    };
+    return result;
   }
 
   static async findProductBySlug(slug: string) {
@@ -50,6 +95,6 @@ export default class ProductModel {
       ])
       .toArray();
 
-      return featuredProducts
+    return featuredProducts;
   }
 }

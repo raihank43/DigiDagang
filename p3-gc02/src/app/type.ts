@@ -25,6 +25,11 @@ export type RegisterInput = {
 };
 
 export type MyResponse<T = null> = {
+  currentPage?: number;
+  itemsPerPage?: number;
+  hasMore?: boolean;
+  totalItems?: number;
+  totalPage?: number;
   error?: string;
   message?: string;
   data: T;
