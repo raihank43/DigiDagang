@@ -90,7 +90,7 @@ export default function Navbar() {
             </div>
           </div>
 
-          <div className="flex flex-shrink-0 items-center">
+          <div className="flex flex-shrink-0 items-center animate-pulse">
             {/* <img
                 className="h-8 w-auto"
                 src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"

@@ -4,7 +4,6 @@ import { Product } from "@/app/type";
 import Link from "next/link";
 
 export default function FeaturedCards({ product }: { product: Product }) {
-
   return (
     <div className="xl:w-1/4 md:w-1/3 flex flex-shrink-0 items-center">
       <Link
@@ -15,7 +14,7 @@ export default function FeaturedCards({ product }: { product: Product }) {
           <img className="w-full h-64 object-cover" src={product.images[0]} />
           <svg
             id="wishlist-icon"
-            className="h-6 w-6 fill-current text-gray-500 transition-colors group-hover:text-black absolute top-2 right-2"
+            className="h-6 w-6 fill-current text-gray-500 transition-colors duration-200 group-hover:text-red-500 absolute top-2 right-2"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
           >

@@ -4,6 +4,7 @@ import ProductCard from "@/components/ProductCard";
 import { MyResponse, Product } from "../type";
 import SearchBar from "@/components/Search";
 import { useEffect, useState } from "react";
+import Pagination from "@/components/Pagination";
 
 export default function ProductsPage() {
   const [products, setProducts] = useState<Product[]>([]);
@@ -17,7 +18,7 @@ export default function ProductsPage() {
           // this will activate the closest `error.js` error boundary
           throw new Error("Failed to fetch data");
         }
-        const result = (await res.json()) as MyResponse<Product[]>
+        const result = (await res.json()) as MyResponse<Product[]>;
         setProducts(result.data);
       } catch (error) {
         console.log(error);
@@ -28,20 +29,25 @@ export default function ProductsPage() {
   }, []);
 
   return (
-    <main className="container">
-      <div>
+    <>
+      <div className="container mx-auto px-4">
+        <h1 className="text-2xl font-bold text-center my-6">All Products</h1>
+
+        {/* Search Bar */}
         <SearchBar />
-      </div>
 
-      <div className="container justify-center">
-        <h1>Product page</h1>
-      </div>
+        {/* Products Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 my-6 p-6">
+          {products.map((product) => (
+            <ProductCard key={product.id} product={product} />
+          ))}
+        </div>
 
-      <div className="flex flex-wrap justify-center gap-10 items-center p-10">
-        {products.map((product, index) => {
-          return <ProductCard product={product} key={index} />;
-        })}
+        {/* Pagination */}
+        <div className="flex justify-center items-center my-8">
+          <Pagination />
+        </div>
       </div>
-    </main>
+    </>
   );
 }
