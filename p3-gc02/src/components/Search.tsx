@@ -4,11 +4,12 @@ import { Product } from "../app/type";
 
 interface SearchBarProps {
   handleSearchChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  handleSearchSubmit: (event: React.MouseEvent<HTMLElement>) => void;
 }
-
-export default function SearchBar({ handleSearchChange }: SearchBarProps) {
- 
-
+export default function SearchBar({
+  handleSearchChange,
+  handleSearchSubmit,
+}: SearchBarProps) {
   return (
     <div className="max-w-2xl mx-auto">
       <form>
@@ -45,6 +46,7 @@ export default function SearchBar({ handleSearchChange }: SearchBarProps) {
           <button
             type="submit"
             className="text-white absolute right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none duration-500 ease-in-out focus:ring-blue-300 font-medium rounded-xl text-sm px-4 py-2 dark:bg-blue-600  dark:focus:ring-blue-800 hover:dark:bg-orange-700"
+            onClick={handleSearchSubmit}
           >
             Search
           </button>

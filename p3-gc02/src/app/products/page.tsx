@@ -39,13 +39,12 @@ export default function ProductsPage() {
     }
   };
 
-  const handleSearchSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+  const handleSearchSubmit = async (event: React.MouseEvent<HTMLElement>) => {
     event.preventDefault();
     // Handle the search term as you wish
     console.log(`User searched for ${searchTerm}`);
+    await fetchSearchProducts();
   };
-
-  console.log(searchTerm);
 
   const fetchProducts = async () => {
     try {
@@ -85,7 +84,10 @@ export default function ProductsPage() {
           <h1 className="text-2xl font-bold text-center my-6">All Products</h1>
 
           <div className=" border-solid border-black duration-500 ease-in-out hover:grow">
-            <SearchBar handleSearchChange={handleSearchChange} />
+            <SearchBar
+              handleSearchChange={handleSearchChange}
+              handleSearchSubmit={handleSearchSubmit}
+            />
           </div>
         </div>
 
