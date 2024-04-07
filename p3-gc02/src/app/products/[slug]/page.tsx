@@ -4,12 +4,20 @@ import Script from "next/script";
 import ProductDetailCarousel from "@/components/ProductDetailCarousel";
 import formatRupiah from "@/app/utils/toRupiahFormat";
 import WishlistProductDetailButton from "@/components/WishlistProductDetailButton";
+import type { Metadata } from 'next'
+ 
+
 
 type ProductDetailProps = {
   params: {
     slug: string;
   };
 };
+
+type Params = {
+  slug: string;
+};
+
 
 async function getDataBySlug(slug: string) {
   const res = await fetch("http://localhost:3000/api/products/" + slug);
@@ -20,6 +28,20 @@ async function getDataBySlug(slug: string) {
   const result = (await res.json()) as MyResponse<Product>;
 
   return result;
+}
+
+export async function generateMetadata({ params }: { params: Params }): Promise<Metadata> {
+  const res = await fetch("http://localhost:3000/api/products/" + params.slug);
+  if (!res.ok) {
+    throw new Error("Something went wrong!");
+  }
+  const result = (await res.json()) as MyResponse<Product>;
+
+  return {
+    title: `DigiDagang - ${result.data.name}`,
+    description: result.data.description,
+    // Anda bisa menambahkan metadata lainnya di sini
+  };
 }
 
 export default async function ProductDetailPage({
