@@ -11,7 +11,7 @@ export type Product = {
   images: string[];
   createdAt: string;
   updatedAt: string;
-  id: string;
+  _id: string;
 };
 
 export type WishlistType = {

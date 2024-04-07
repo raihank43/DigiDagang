@@ -12,7 +12,7 @@ export async function GET(request: NextRequest) {
 
 export async function POST(request: NextRequest) {
   try {
-    const { productId }: { productId: string } = await request.json();
+    const body:string = await request.json();
 
     // console.log(request.headers.get("x-user-id"), "<<<< user id di route");
     // console.log(
@@ -22,7 +22,7 @@ export async function POST(request: NextRequest) {
 
     const data = {
       userId: request.headers.get("x-user-id") as string,
-      productId: productId,
+      productId: body,
     };
 
     const response = await WishlistModel.addWishlist(data);
@@ -36,6 +36,8 @@ export async function POST(request: NextRequest) {
     });
   } catch (error) {
     console.log(error);
+    return error
+
   }
 }
 
