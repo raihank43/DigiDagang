@@ -5,6 +5,7 @@ import { cookies } from "next/headers";
 import { ObjectId } from "mongodb";
 import WishlistItem from "@/components/WishlistItem";
 import { toast } from "react-toastify";
+const baseURL = process.env.NEXT_PUBLIC_BASE_URL
 
 export default async function Wishlist() {
   // const products = [
@@ -33,7 +34,7 @@ export default async function Wishlist() {
 
   const fetchWishlistData = async () => {
     try {
-      const res = await fetch("http://localhost:3000/api/wishlists");
+      const res = await fetch(baseURL + "wishlists");
 
       if (!res.ok) {
         throw new Error("Failed to fetch data.");
@@ -53,7 +54,7 @@ export default async function Wishlist() {
 
     console.log(wishlistId, "<<<<<<<<<<<<<<");
     try {
-      const res = await fetch(`http://localhost:3000/api/wishlists`, {
+      const res = await fetch(baseURL + `wishlists`, {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",

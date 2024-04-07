@@ -3,6 +3,7 @@
 import { MyResponse } from "@/app/type";
 import { ObjectId } from "mongodb";
 import { toast } from "react-toastify";
+const baseURL = process.env.NEXT_PUBLIC_BASE_URL;
 
 export default function WishlistButtonComponent({
   productId,
@@ -13,7 +14,7 @@ export default function WishlistButtonComponent({
     // logika untuk menghapus produk dari wishlist
     console.log(`Product ${productId} added to wishlist`);
     try {
-      const res = await fetch(`http://localhost:3000/api/wishlists`, {
+      const res = await fetch(baseURL + `wishlists`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -21,11 +22,11 @@ export default function WishlistButtonComponent({
         body: JSON.stringify(productId),
       });
       if (!res.ok) {
-        toast.error("Silahkan login dulu sebelum akses fitur ini!")
+        toast.error("Silahkan login dulu sebelum akses fitur ini!");
         throw new Error("Invalid token");
       }
-      
-      const result = (await res.json()) as MyResponse
+
+      const result = (await res.json()) as MyResponse;
       toast.success(result.message);
     } catch (error) {
       console.log(error);

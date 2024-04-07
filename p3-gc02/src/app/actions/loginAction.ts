@@ -4,9 +4,10 @@ import { redirect } from "next/navigation";
 import { LoginInput, MyResponse } from "../type";
 import { toast } from "react-toastify";
 import { cookies } from "next/headers";
+const baseURL = process.env.NEXT_PUBLIC_BASE_URL
 
 export async function loginServerAction(formData: LoginInput) {
-  const response = await fetch("http://localhost:3000/api/login", {
+  const response = await fetch(baseURL + "login", {
     cache: "no-store",
     method: "POST",
     headers: {

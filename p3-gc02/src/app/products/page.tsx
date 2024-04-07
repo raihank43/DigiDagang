@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 import Pagination from "@/components/Pagination";
 import InfiniteScroll from "react-infinite-scroll-component";
 import LoadingComponent from "@/components/LoadingComponent";
-
+const baseURL = process.env.NEXT_PUBLIC_BASE_URL
 export default function ProductsPage() {
   const [products, setProducts] = useState<Product[]>([]);
   const [stateHasMore, setStatehasMore] = useState(true);
@@ -24,7 +24,7 @@ export default function ProductsPage() {
   const fetchSearchProducts = async () => {
     try {
       const res = await fetch(
-        "http://localhost:3000/api/search-products?search=" + searchTerm
+        baseURL + "search-products?search=" + searchTerm
       );
 
       if (!res.ok) {
@@ -49,7 +49,7 @@ export default function ProductsPage() {
   const fetchProducts = async () => {
     try {
       const res = await fetch(
-        "http://localhost:3000/api/products" + "?page=" + (currentPage + 1)
+        baseURL + "products" + "?page=" + (currentPage + 1)
       );
 
       if (!res.ok) {

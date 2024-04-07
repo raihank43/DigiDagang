@@ -3,9 +3,10 @@
 
 import { redirect } from "next/navigation";
 import { MyResponse, RegisterInput } from "../type";
+const baseURL = process.env.NEXT_PUBLIC_BASE_URL
 
 export async function RegisterAction(formData: RegisterInput) {
-  const response = await fetch("http://localhost:3000/api/register", {
+  const response = await fetch(baseURL + "register", {
     cache: "no-store",
     method: "POST",
     headers: {

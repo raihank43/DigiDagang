@@ -1,9 +1,10 @@
 "use server";
 
 import { MyResponse, Product } from "../type";
+const baseURL = process.env.NEXT_PUBLIC_BASE_URL
 
 export async function fetchProductsServerAction() {
-  const response = await fetch("http://localhost:3000/api/products");
+  const response = await fetch(baseURL + "products");
 
   const result = response.json();
 
@@ -16,7 +17,7 @@ export async function fetchProductsServerAction() {
 }
 
 export async function fetctProductsBySlugServerAction(slug: string) {
-  const res = await fetch("http://localhost:3001/api/products/" + slug);
+  const res = await fetch(baseURL + "products/" + slug);
   if (!res.ok) {
     console.log("masukkk");
     throw new Error("Something went wrong!");

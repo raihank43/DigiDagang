@@ -5,6 +5,7 @@ import ProductDetailCarousel from "@/components/ProductDetailCarousel";
 import formatRupiah from "@/app/utils/toRupiahFormat";
 import WishlistProductDetailButton from "@/components/WishlistProductDetailButton";
 import type { Metadata } from 'next'
+const baseURL = process.env.NEXT_PUBLIC_BASE_URL
  
 
 
@@ -20,7 +21,7 @@ type Params = {
 
 
 async function getDataBySlug(slug: string) {
-  const res = await fetch("http://localhost:3000/api/products/" + slug);
+  const res = await fetch(baseURL + "products/" + slug);
   if (!res.ok) {
     console.log("masukkk");
     throw new Error("Something went wrong!");
@@ -31,7 +32,7 @@ async function getDataBySlug(slug: string) {
 }
 
 export async function generateMetadata({ params }: { params: Params }): Promise<Metadata> {
-  const res = await fetch("http://localhost:3000/api/products/" + params.slug);
+  const res = await fetch(baseURL + "products/" + params.slug);
   if (!res.ok) {
     throw new Error("Something went wrong!");
   }

@@ -2,6 +2,7 @@
 
 import { MyResponse } from "@/app/type";
 import { toast } from "react-toastify";
+const baseURL = process.env.NEXT_PUBLIC_BASE_URL
 
 export default function WishlistProductDetailButton({
   productId,
@@ -12,7 +13,7 @@ export default function WishlistProductDetailButton({
     // logika untuk menghapus produk dari wishlist
     console.log(`Product ${productId} added to wishlist`);
     try {
-      const res = await fetch(`http://localhost:3000/api/wishlists`, {
+      const res = await fetch(baseURL + `wishlists`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
