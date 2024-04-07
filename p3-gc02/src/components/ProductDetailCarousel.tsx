@@ -15,6 +15,7 @@ export default function ProductDetailCarousel({
           <div
             id={`slide${index + 1}`}
             className="carousel-item relative w-full"
+            key={index}
           >
             <img src={el} className="w-full h-full object-cover" />
             <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
