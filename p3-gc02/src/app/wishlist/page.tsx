@@ -1,5 +1,4 @@
 "use client";
-import WishlistDeleteButton from "@/components/WishlistDeleteButton";
 import React, { useEffect, useState } from "react";
 import { MyResponse, WishlistType } from "../type";
 import { cookies } from "next/headers";

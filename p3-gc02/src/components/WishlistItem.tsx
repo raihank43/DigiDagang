@@ -3,6 +3,7 @@ import { useRouter } from "next/navigation";
 import { Product } from "../app/type";
 import Link from "next/link";
 import formatRupiah from "@/app/utils/toRupiahFormat";
+import WishlistDeleteButton from "./WishlistDeleteButton";
 
 type ProductCardProps = {
   product: Product;
@@ -12,6 +13,8 @@ export default function WishlistItem({ product }: ProductCardProps) {
   return (
     <div className="flex w-full max-w-sm flex-col rounded-xl bg-white shadow-lg duration-500 ease-in-out  transition-transform hover:scale-110 hover:shadow-lg">
       <div className="relative overflow-hidden rounded-t-xl">
+        {/* Tombol Delete */}
+      <WishlistDeleteButton/>
         <img src={product.thumbnail} alt="ui/ux review check" />
         <div className="to-bg-black-10 absolute inset-0 h-full w-full bg-gradient-to-tr from-transparent via-transparent to-black/60" />
         <button
@@ -75,7 +78,6 @@ export default function WishlistItem({ product }: ProductCardProps) {
         </p>
       </div>
       <div className="mt-auto">
-
         <Link
           href={"/products/" + product.slug}
           className="block w-full select-none rounded-b-lg bg-blue-800 py-3.5 px-7 text-center align-middle font-sans text-sm font-bold uppercase text-white shadow-md shadow-pink-500/20 transition-all hover:shadow-lg hover:shadow-pink-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none hover:bg-blue-400 hover:text-blue-950"
