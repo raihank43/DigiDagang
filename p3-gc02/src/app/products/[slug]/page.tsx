@@ -3,6 +3,8 @@ import { MyResponse, Product } from "@/app/type";
 import Script from "next/script";
 import ProductDetailCarousel from "@/components/ProductDetailCarousel";
 import formatRupiah from "@/app/utils/toRupiahFormat";
+import WishlistProductDetailButton from "@/components/WishlistProductDetailButton";
+
 
 type ProductDetailProps = {
   params: {
@@ -160,6 +162,7 @@ export default async function ProductDetailPage({
                 >
                   Add to Cart
                 </button>
+                <WishlistProductDetailButton/>
               </div>
             </div>
           </div>
