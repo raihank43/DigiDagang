@@ -1,10 +1,14 @@
+"use client";
 import React, { useState } from "react";
 import Link from "next/link";
 import ProfileDropdown from "./ProfileDropDown";
+import { usePathname } from "next/navigation";
 
 export default function Navbar() {
+  const pathname = usePathname();
   return (
     <nav className="fixed z-50 w-full bg-white shadow-lg top-0">
+      {/* <p>Current pathname: {pathname}</p> */}
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div className="relative flex h-16 items-center justify-between">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -63,26 +67,42 @@ export default function Navbar() {
                 {/* Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" */}
                 <Link
                   href={"/"}
-                  className="bg-gray-900 text-white rounded-md  px-3 py-2 text-sm font-bold"
+                  className={`text-black px-3 py-2 text-sm font-bold duration-500 ease-in-out hover:border-blue-600 border-b-2 ${
+                    pathname == "/"
+                      ? "border-orange-700 border-b-3"
+                      : "border-white"
+                  }`}
                   aria-current="page"
                 >
                   Home
                 </Link>
                 <Link
                   href={"/wishlist"}
-                  className="text-black hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-bold"
+                  className={`text-black px-3 py-2 text-sm font-bold duration-500 ease-in-out hover:border-blue-600 border-b-2 ${
+                    pathname == "/wishlist"
+                      ? "border-orange-700 border-b-3"
+                      : "border-white"
+                  }`}
                 >
                   Wishlist
                 </Link>
                 <Link
                   href={"/products"}
-                  className="text-black hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-bold"
+                  className={`text-black px-3 py-2 text-sm font-bold duration-500 ease-in-out hover:border-blue-600 border-b-2 ${
+                    pathname == "/products"
+                      ? "border-orange-700 border-b-3"
+                      : "border-white"
+                  }`}
                 >
                   Produk
                 </Link>
                 <Link
                   href="/about"
-                  className="text-black hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-bold"
+                  className={`text-black px-3 py-2 text-sm font-bold duration-500 ease-in-out hover:border-blue-600 border-b-2 ${
+                    pathname == "/about"
+                      ? "border-orange-700 border-b-3"
+                      : "border-white"
+                  }`}
                 >
                   About
                 </Link>
@@ -97,8 +117,12 @@ export default function Navbar() {
                 alt="Your Company"
               /> */}
             <h1 className="ml-8 font-bold">
-              <span className=" italic text-2xl font-poppins-black text-indigo-500">Digi </span>
-              <span className=" font-extrabold font-poppins-bold text-orange-600">Dagang</span>
+              <span className=" italic text-2xl font-poppins-black text-indigo-500">
+                Digi{" "}
+              </span>
+              <span className=" font-extrabold font-poppins-bold text-orange-600">
+                Dagang
+              </span>
             </h1>
           </div>
 

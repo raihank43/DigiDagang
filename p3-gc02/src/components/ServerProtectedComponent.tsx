@@ -11,7 +11,7 @@ export default function ServerProtectedComponent({
   const tokenCookie = cookies().get("Authorization");
 
   if (!tokenCookie) {
-    return redirect("/");
+    return redirect("/login");
   }
 
   return children;
