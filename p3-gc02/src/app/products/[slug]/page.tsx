@@ -5,7 +5,6 @@ import ProductDetailCarousel from "@/components/ProductDetailCarousel";
 import formatRupiah from "@/app/utils/toRupiahFormat";
 import WishlistProductDetailButton from "@/components/WishlistProductDetailButton";
 
-
 type ProductDetailProps = {
   params: {
     slug: string;
@@ -91,9 +90,7 @@ export default async function ProductDetailPage({
                     <span className="text-5xl">1</span>
                   </div> */}
 
-                  <ProductDetailCarousel  images={product.data.images}/>
-  
-                
+                  <ProductDetailCarousel images={product.data.images} />
                 </div>
                 <div className="flex -mx-2 mb-4">
                   <template x-for="i in 4" />
@@ -129,6 +126,15 @@ export default async function ProductDetailPage({
                 </div>
               </div>
               <p className="text-gray-500">{product.data.description}</p>
+              <div className="flex flex-wrap my-4 gap-3">
+                {product.data.tags.map((el,index) => {
+                  return (
+                    <div key={index} className="bg-orange-400 p-2 rounded-e-badge text-xs border-none shadow-lg">
+                      <p className="font-bold">{el}</p>
+                    </div>
+                  );
+                })}
+              </div>
               <div className="flex py-4 space-x-4">
                 <div className="relative">
                   <div className="text-center left-0 pt-2 right-0 absolute block text-xs uppercase text-gray-400 tracking-wide font-semibold">
@@ -162,7 +168,7 @@ export default async function ProductDetailPage({
                 >
                   Add to Cart
                 </button>
-                <WishlistProductDetailButton/>
+                <WishlistProductDetailButton productId={product.data._id} />
               </div>
             </div>
           </div>
