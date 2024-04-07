@@ -38,4 +38,37 @@ export default class WishlistModel {
       updatedAt: new Date(),
     });
   }
+
+  static async findWislistById(wishlistId: string) {
+    const wishlistData = await this.wishlistCollection()
+      .aggregate([
+        {
+          $match: {
+            _id: new ObjectId(wishlistId),
+          },
+        },
+        {
+          $lookup: {
+            from: "products",
+            localField: "productId",
+            foreignField: "_id",
+            as: "Product",
+          },
+        },
+        {
+          $unwind: {
+            path: "$Product",
+          },
+        },
+      ])
+      .toArray();
+
+      return wishlistData[0]
+  }
+
+  static async deleteOneWishlist(wishlistId: string) {
+    return await this.wishlistCollection().deleteOne({
+      _id: new ObjectId(wishlistId),
+    });
+  }
 }

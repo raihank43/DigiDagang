@@ -1,3 +1,5 @@
+import { ObjectId } from "mongodb";
+
 export type Product = {
   name: string;
   slug: string;
@@ -10,6 +12,15 @@ export type Product = {
   createdAt: string;
   updatedAt: string;
   id: string;
+};
+
+export type Wishlist = {
+  _id: ObjectId;
+  userId: ObjectId;
+  productId: ObjectId;
+  createdAt: Date;
+  updatedAt: Date;
+  Product: Product
 };
 
 export type LoginInput = {

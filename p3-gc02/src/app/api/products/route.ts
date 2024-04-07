@@ -18,11 +18,11 @@ export async function GET(request: NextRequest) {
 
     // console.log(totalAllProducts)
 
-    console.log(request.headers.get("x-user-id"), "<<<< user id di route");
-    console.log(
-      request.headers.get("x-user-email"),
-      "<<<< user email di route"
-    );
+    // console.log(request.headers.get("x-user-id"), "<<<< user id di route");
+    // console.log(
+    //   request.headers.get("x-user-email"),
+    //   "<<<< user email di route"
+    // );
 
     return NextResponse.json<MyResponse<Product[]>>(
       {
