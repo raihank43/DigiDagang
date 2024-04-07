@@ -26,6 +26,33 @@ export default class WishlistModel {
     return (await this.wishlistCollection().find().toArray()) as Wishlist[];
   }
 
+  static async getUserWishlistItems(userId: string) {
+    const wishlistData = await this.wishlistCollection()
+      .aggregate([
+        {
+          $match: {
+            userId: new ObjectId(userId),
+          },
+        },
+        {
+          $lookup: {
+            from: "products",
+            localField: "productId",
+            foreignField: "_id",
+            as: "Product",
+          },
+        },
+        {
+          $unwind: {
+            path: "$Product",
+          },
+        },
+      ])
+      .toArray() as Wishlist[]
+
+    return wishlistData;
+  }
+
   static async addWishlist(newWishlist: WishlistInputSchema) {
     const wishlistParsed = WishlistSchema.parse(newWishlist);
 
@@ -63,7 +90,7 @@ export default class WishlistModel {
       ])
       .toArray();
 
-      return wishlistData[0]
+    return wishlistData[0];
   }
 
   static async deleteOneWishlist(wishlistId: string) {

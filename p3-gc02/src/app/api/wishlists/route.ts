@@ -4,7 +4,10 @@ import { ObjectId } from "mongodb";
 import { NextRequest, NextResponse } from "next/server";
 
 export async function GET(request: NextRequest) {
-  const wishlists = WishlistModel.findAll();
+  const userId = request.headers.get("x-user-id") as string;
+  const wishlists = await WishlistModel.getUserWishlistItems(userId)
+
+  console.log(wishlists)
 
   return NextResponse.json({ data: wishlists }, { status: 200 });
 }
@@ -29,7 +32,7 @@ export async function POST(request: NextRequest) {
     const findWishlist = await WishlistModel.findWislistById(
       String(response.insertedId)
     );
-    
+
     return NextResponse.json({
       message: `Berhasil menambahkan ${findWishlist.Product.name} ke wishlist mu.`,
     });
