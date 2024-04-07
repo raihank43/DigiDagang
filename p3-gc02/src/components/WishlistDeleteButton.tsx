@@ -7,7 +7,10 @@ interface DeleteButtonProps {
   productId: ObjectId;
 }
 
-export default function WishlistDeleteButton() {
+export default function WishlistDeleteButton({
+  handleDelete,
+  productId,
+}: DeleteButtonProps) {
   return (
     <button
       //   onClick={handleDelete}
