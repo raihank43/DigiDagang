@@ -4,7 +4,7 @@ import ProfileDropdown from "./ProfileDropDown";
 
 export default function Navbar() {
   return (
-    <nav className=" z-50 bg-white shadow-lg">
+    <nav className="fixed z-50 w-full bg-white shadow-lg top-0">
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div className="relative flex h-16 items-center justify-between">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -90,7 +90,7 @@ export default function Navbar() {
             </div>
           </div>
 
-          <div className="flex flex-shrink-0 items-center animate-pulse">
+          <div className="flex flex-shrink-0 items-center">
             {/* <img
                 className="h-8 w-auto"
                 src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"

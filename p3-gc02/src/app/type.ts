@@ -14,7 +14,7 @@ export type Product = {
   id: string;
 };
 
-export type Wishlist = {
+export type WishlistType = {
   _id: ObjectId;
   userId: ObjectId;
   productId: ObjectId;

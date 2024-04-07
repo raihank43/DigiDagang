@@ -1,4 +1,4 @@
-import { Wishlist } from "@/app/type";
+import { WishlistType } from "@/app/type";
 import WishlistModel from "@/db/models/wishlist";
 import { ObjectId } from "mongodb";
 import { NextRequest, NextResponse } from "next/server";
@@ -6,8 +6,6 @@ import { NextRequest, NextResponse } from "next/server";
 export async function GET(request: NextRequest) {
   const userId = request.headers.get("x-user-id") as string;
   const wishlists = await WishlistModel.getUserWishlistItems(userId)
-
-  console.log(wishlists)
 
   return NextResponse.json({ data: wishlists }, { status: 200 });
 }
@@ -53,7 +51,7 @@ export async function DELETE(request: NextRequest) {
 
     const findWishlist = (await WishlistModel.findWislistById(
       wishlistId
-    )) as Wishlist;
+    )) as WishlistType;
 
     if (!findWishlist) {
       return NextResponse.json(

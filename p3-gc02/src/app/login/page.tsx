@@ -29,7 +29,7 @@ export default function Login() {
 
   return (
     <>
-      <div className=" h-auto flex items-center justify-center xl:mb-20">
+      <div className=" h-auto flex items-center justify-center xl:mb-20 pt-20">
         {/* <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" /> */}
         <div className="bg-purple-900 absolute top-0 left-0 bg-gradient-to-b from-blue-600 bottom-0 leading-5 h-full w-full overflow-hidden" />
         <div className="relative min-w-full sm:flex sm:flex-row justify-center bg-transparent rounded-3xl shadow-xl">

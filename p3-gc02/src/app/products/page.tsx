@@ -79,7 +79,7 @@ export default function ProductsPage() {
   }, [searchTerm]);
   return (
     <>
-      <div className="mt-0 mx-auto px-4 bg-white rounded-lg">
+      <div className="mt-0 mx-auto px-4 bg-white rounded-lg pt-16">
         <div className="flex flex-row justify-between items-center p-8">
           <h1 className="text-2xl font-bold text-center my-6">All Products</h1>
 
