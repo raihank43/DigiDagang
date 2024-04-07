@@ -4,17 +4,28 @@ import { Product } from "../app/type";
 import Link from "next/link";
 import formatRupiah from "@/app/utils/toRupiahFormat";
 import WishlistDeleteButton from "./WishlistDeleteButton";
+import { ObjectId } from "mongodb";
 
 type ProductCardProps = {
   product: Product;
+  handleDelete: (wishlistId: ObjectId) => void;
+  wishlistId: ObjectId;
 };
-export default function WishlistItem({ product }: ProductCardProps) {
+export default function WishlistItem({
+  product,
+  handleDelete,
+  wishlistId,
+}: ProductCardProps) {
   const router = useRouter();
+  console.log(product);
   return (
     <div className="flex w-full max-w-sm flex-col rounded-xl bg-white shadow-lg duration-500 ease-in-out  transition-transform hover:scale-110 hover:shadow-lg">
       <div className="relative overflow-hidden rounded-t-xl">
         {/* Tombol Delete */}
-      <WishlistDeleteButton/>
+        <WishlistDeleteButton
+          handleDelete={handleDelete}
+          wishlistId={wishlistId}
+        />
         <img src={product.thumbnail} alt="ui/ux review check" />
         <div className="to-bg-black-10 absolute inset-0 h-full w-full bg-gradient-to-tr from-transparent via-transparent to-black/60" />
         <button

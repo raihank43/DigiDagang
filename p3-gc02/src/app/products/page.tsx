@@ -113,8 +113,8 @@ export default function ProductsPage() {
             </p>
           }
         >
-          {products.map((product) => (
-            <ProductCard key={product.id} product={product} />
+          {products.map((product, index) => (
+            <ProductCard key={index} product={product} />
           ))}
         </InfiniteScroll>
         {/* </div> */}

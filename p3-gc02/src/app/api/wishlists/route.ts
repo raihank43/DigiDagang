@@ -5,7 +5,7 @@ import { NextRequest, NextResponse } from "next/server";
 
 export async function GET(request: NextRequest) {
   const userId = request.headers.get("x-user-id") as string;
-  const wishlists = await WishlistModel.getUserWishlistItems(userId)
+  const wishlists = await WishlistModel.getUserWishlistItems(userId);
 
   return NextResponse.json({ data: wishlists }, { status: 200 });
 }
@@ -41,8 +41,9 @@ export async function POST(request: NextRequest) {
 
 export async function DELETE(request: NextRequest) {
   try {
-    const { wishlistId }: { wishlistId: string } = await request.json();
+    const body:string = await request.json();
 
+    console.log(body)
     const userId = request.headers.get("x-user-id") as string;
 
     // const objectUserId = new ObjectId(userId);
@@ -50,7 +51,7 @@ export async function DELETE(request: NextRequest) {
     // console.log(objectUserId, "<<<<<")
 
     const findWishlist = (await WishlistModel.findWislistById(
-      wishlistId
+      body
     )) as WishlistType;
 
     if (!findWishlist) {
@@ -68,7 +69,7 @@ export async function DELETE(request: NextRequest) {
     //   throw new Error("You're not allowed to do this process");
     // }
 
-    const response = await WishlistModel.deleteOneWishlist(wishlistId);
+    const response = await WishlistModel.deleteOneWishlist(body);
 
     return NextResponse.json({
       message: `Berhasil menghapus ${findWishlist.Product.name} dari wishlist mu.`,

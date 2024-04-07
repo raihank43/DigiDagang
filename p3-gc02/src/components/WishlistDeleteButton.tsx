@@ -3,17 +3,17 @@
 import { ObjectId } from "mongodb";
 
 interface DeleteButtonProps {
-  handleDelete: (productId: ObjectId) => void;
-  productId: ObjectId;
+  handleDelete: (wishlistId: ObjectId) => void;
+  wishlistId: ObjectId
 }
 
 export default function WishlistDeleteButton({
+  wishlistId,
   handleDelete,
-  productId,
 }: DeleteButtonProps) {
   return (
     <button
-      //   onClick={handleDelete}
+      onClick={() => handleDelete(wishlistId)}
       className="absolute top-0 left-0 z-10 m-2 inline-flex h-8 w-8 items-center justify-center rounded-full bg-red-600 text-white transition duration-300 ease-in-out hover:bg-red-700 hover:scale-110 focus:outline-none"
     >
       <svg

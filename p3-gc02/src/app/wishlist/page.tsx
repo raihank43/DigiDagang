@@ -4,6 +4,7 @@ import { MyResponse, WishlistType } from "../type";
 import { cookies } from "next/headers";
 import { ObjectId } from "mongodb";
 import WishlistItem from "@/components/WishlistItem";
+import { toast } from "react-toastify";
 
 export default async function Wishlist() {
   // const products = [
@@ -46,9 +47,28 @@ export default async function Wishlist() {
     }
   };
 
-  const handleDelete = (productId: ObjectId) => {
+  const handleDelete = async (wishlistId: ObjectId) => {
     // logika untuk menghapus produk dari wishlist
-    console.log(`Product ${productId} deleted`);
+    console.log(`Product ${wishlistId} deleted`);
+
+    console.log(wishlistId, "<<<<<<<<<<<<<<");
+    try {
+      const res = await fetch(`http://localhost:3000/api/wishlists`, {
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(wishlistId),
+      });
+      const result = (await res.json()) as MyResponse;
+
+      console.log(result);
+
+      fetchWishlistData();
+      toast.success(result.message);
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   const handleSeeDetail = (productDetail: string) => {
@@ -69,15 +89,19 @@ export default async function Wishlist() {
       <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 p-10">
         {wishlistItems.length !== 0 ? (
           wishlistItems.map((items, index) => (
-            <WishlistItem product={items.Product} key={index} />
+            <WishlistItem
+              product={items.Product}
+              key={index}
+              handleDelete={handleDelete}
+              wishlistId={items._id}
+            />
           ))
         ) : (
-          <div className="flex h-screen justify-center items-center">
+          <div className="flex h-screen w-screen self-center justify-center items-center max-w-screen-lg">
             <h1>Belum ada wishlist, tambahkan produk ke wishlistmu!</h1>
           </div>
         )}
       </div>
- 
     </div>
   );
 }
