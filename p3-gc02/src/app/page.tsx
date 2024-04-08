@@ -26,7 +26,7 @@ export default async function Home() {
   const products = await fetchFeaturedProducts();
   return (
     <>
-      <div className="min-h-screen bg-white">
+      <div className="min-h-screen bg-white pt-16">
         <Carousel />
         <header className="text-white p-12 text-center rounded-t-3xl bg-gradient-to-b from-blue-500 to-blue-400">
           <div className="mt-5">

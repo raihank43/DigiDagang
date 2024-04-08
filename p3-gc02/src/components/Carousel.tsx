@@ -1,5 +1,6 @@
-'use client'
-import React from 'react'
+"use client";
+import Link from "next/link";
+import React from "react";
 
 export default function Carousel() {
   return (
@@ -20,26 +21,24 @@ export default function Carousel() {
         />
         <div
           className="carousel-item absolute opacity-0"
-          style={{ height: '50vh' }}
+          style={{ height: "50vh" }}
         >
           <div
             className="h-full w-full mx-auto flex pt-6 md:pt-0 md:items-center bg-cover bg-right"
             style={{
               backgroundImage:
-                'url("https://images.unsplash.com/photo-1422190441165-ec2956dc9ecc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1600&q=80")',
+                'url("https://static.vecteezy.com/system/resources/previews/005/217/748/non_2x/illustration-graphic-big-sale-modern-promotional-banner-design-template-illustration-vector.jpg")',
             }}
           >
             <div className="container mx-auto">
               <div className="flex flex-col w-full lg:w-1/2 md:ml-16 items-center md:items-start px-6 tracking-wide">
-                <p className="text-black text-2xl my-4">
-                  Stripy Zig Zag Jigsaw Pillow and Duvet Set
-                </p>
-                <a
-                  className="text-xl inline-block no-underline border-b text-gray-900 border-gray-600 leading-relaxed hover:text-black hover:border-black"
-                  href="#"
+                <p className="text-black text-2xl my-4"></p>
+                <Link
+                  className="btn bg-orange-500 border-none text-white shadow-lg hover:bg-blue-400"
+                  href="/products"
                 >
-                  view product
-                </a>
+                  Lihat Produk
+                </Link>
               </div>
             </div>
           </div>
@@ -67,24 +66,24 @@ export default function Carousel() {
         />
         <div
           className="carousel-item absolute opacity-0 bg-cover bg-right"
-          style={{ height: '50vh' }}
+          style={{ height: "50vh" }}
         >
           <div
             className="h-full w-full mx-auto flex pt-6 md:pt-0 md:items-center bg-cover bg-right"
             style={{
               backgroundImage:
-                'url("https://images.unsplash.com/photo-1533090161767-e6ffed986c88?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjM0MTM2fQ&auto=format&fit=crop&w=1600&q=80")',
+                'url("https://www.quictents.com/cdn/shop/files/weekly_deal_pc_banner_home_page_1400.webp?v=1695368063&width=1400")',
             }}
           >
             <div className="container mx-auto">
               <div className="flex flex-col w-full lg:w-1/2 md:ml-16 items-center md:items-start px-6 tracking-wide">
-                <p className="text-black text-2xl my-4">Real Bamboo Wall Clock</p>
-                <a
-                  className="text-xl inline-block no-underline border-b text-gray-900 border-gray-600 leading-relaxed hover:text-black hover:border-black"
-                  href="#"
+                <p className="text-black text-2xl my-4"></p>
+                <Link
+                  className="btn bg-orange-500 border-none text-white shadow-lg hover:bg-blue-400"
+                  href="/products"
                 >
-                  view product
-                </a>
+                  Lihat Produk
+                </Link>
               </div>
             </div>
           </div>
@@ -112,26 +111,24 @@ export default function Carousel() {
         />
         <div
           className="carousel-item absolute opacity-0"
-          style={{ height: '50vh' }}
+          style={{ height: "50vh" }}
         >
           <div
             className="h-full w-full mx-auto flex pt-6 md:pt-0 md:items-center bg-cover bg-bottom"
             style={{
               backgroundImage:
-                'url("https://images.unsplash.com/photo-1519327232521-1ea2c736d34d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1600&q=80")',
+                'url("https://img.freepik.com/premium-vector/realistic-big-sale-promotion-sale-banner-template-design_19573-999.jpg")',
             }}
           >
             <div className="container mx-auto">
               <div className="flex flex-col w-full lg:w-1/2 md:ml-16 items-center md:items-start px-6 tracking-wide">
-                <p className="text-black text-2xl my-4">
-                  Brown and blue hardbound book
-                </p>
-                <a
-                  className="text-xl inline-block no-underline border-b text-gray-900 border-gray-600 leading-relaxed hover:text-black hover:border-black"
-                  href="#"
+                <p className="text-black text-2xl my-4"></p>
+                <Link
+                  className="btn bg-orange-500 border-none text-white shadow-lg hover:bg-blue-400"
+                  href="/products"
                 >
-                  view product
-                </a>
+                  Lihat Produk
+                </Link>
               </div>
             </div>
           </div>
@@ -177,5 +174,5 @@ export default function Carousel() {
         </ol>
       </div>
     </div>
-  )
+  );
 }
