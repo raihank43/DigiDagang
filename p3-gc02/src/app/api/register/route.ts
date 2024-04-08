@@ -34,6 +34,22 @@ export async function POST(request: Request) {
           status: 400,
         }
       );
+    } else if (
+      error instanceof Error
+    ) {
+      return Response.json(
+        {
+          error: error.message,
+        },
+        { status: 400 }
+      );
+    } else {
+      return Response.json(
+        {
+          error: "Internal server error",
+        },
+        { status: 500 }
+      );
     }
   }
 }

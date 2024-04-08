@@ -36,6 +36,21 @@ export default class User {
 
     console.log(newUserParsed);
 
+    const isEmailUniqueValid = await this.userCollection().findOne({
+      email: newUser.email,
+    });
+    const isUsernameUniqueValid = await this.userCollection().findOne({
+      username: newUser.username,
+    });
+
+    if (isEmailUniqueValid) {
+      throw new Error("Email must be unique.");
+    }
+
+    if (isUsernameUniqueValid) {
+      throw new Error("Username must be unique.");
+    }
+
     return await this.userCollection().insertOne({
       ...newUser,
       password: await bcryptjs.hash(newUser.password, 10),
