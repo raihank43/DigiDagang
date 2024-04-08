@@ -1,7 +1,7 @@
 import { MongoClient, ServerApiVersion } from "mongodb";
 
-const uri = process.env.MONGO_URI || "mongodb://localhost:27017";
-const dbName = process.env.MONGO_DB_NAME || 'sample_mflix'
+const uri = process.env.MONGO_URI as string;
+const dbName = process.env.MONGO_DB_NAME;
 
 const client = new MongoClient(uri, {
   serverApi: {
@@ -11,5 +11,4 @@ const client = new MongoClient(uri, {
   },
 });
 
-export const db = client.db(dbName)
-
+export const db = client.db(dbName);

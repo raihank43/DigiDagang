@@ -6,7 +6,9 @@ import Link from "next/link";
 import FeaturedCards from "@/components/FeaturedCard";
 import Footer from "@/components/Footer";
 import { MyResponse, Product } from "./type";
-const baseURL = process.env.NEXT_PUBLIC_BASE_URL
+const baseURL = process.env.NEXT_PUBLIC_BASE_URL;
+export const dynamic = "force-dynamic";
+
 
 async function fetchFeaturedProducts() {
   const res = await fetch(baseURL + "featuredProducts");
@@ -72,9 +74,7 @@ export default async function Home() {
                 })}
               </div>
             </section>
-            <div className="text-right mt-4">
-         
-            </div>
+            <div className="text-right mt-4"></div>
           </section>
         </main>
       </div>

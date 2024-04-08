@@ -1,6 +1,7 @@
 import { MyResponse, Product } from "@/app/type";
 import ProductModel from "@/db/models/products";
 import { NextRequest, NextResponse } from "next/server";
+export const dynamic = "force-dynamic";
 
 export async function GET(request: NextRequest) {
   try {
