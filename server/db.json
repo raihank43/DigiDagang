@@ -1,0 +1,342 @@
+{
+  "users": [],
+  "wishlist": [],
+  "products": [
+    {
+      "name": "Samsung Galaxy S21 Ultra 5G",
+      "slug": "samsung-galaxy-s21-ultra-5g",
+      "description": "Samsung Galaxy S21 Ultra 5G adalah ponsel pintar kelas atas dengan layar Dynamic AMOLED 2X 6.8 inci, kamera belakang 108MP, RAM 12GB, dan baterai 5000mAh.",
+      "excerpt": "Samsung Galaxy S21 Ultra 5G",
+      "price": 18499000,
+      "tags": ["smartphone", "samsung", "galaxy s21 ultra"],
+      "thumbnail": "https://fdn.gsmarena.com/imgroot/reviews/21/samsung-galaxy-s21-ultra/lifestyle/-1024w2/gsmarena_012.jpg",
+      "images": [
+        "https://th.bing.com/th/id/OIP.3iRYOSf6W5lk-EcweYMnAwHaHY?rs=1&pid=ImgDetMain",
+        "https://www.deepspecs.com/wp-content/uploads/2021/01/1-samsung-galaxy-s21-ultra-5g-deepspecs.jpg",
+        "https://fdn.gsmarena.com/imgroot/reviews/21/samsung-galaxy-s21-ultra/lifestyle/-1024w2/gsmarena_012.jpg"
+      ],
+      "createdAt": "2024-03-01T12:00:00.000Z",
+      "updatedAt": "2024-03-30T08:30:00.000Z"
+    },
+    {
+      "name": "Xiaomi Mi 11 Lite",
+      "slug": "xiaomi-mi-11-lite",
+      "description": "Xiaomi Mi 11 Lite adalah smartphone kelas menengah dengan layar AMOLED 6.55 inci, kamera belakang 64MP, RAM 6GB, dan baterai 4250mAh.",
+      "excerpt": "Xiaomi Mi 11 Lite",
+      "price": 3799000,
+      "tags": ["smartphone", "xiaomi", "mi 11 lite"],
+      "thumbnail": "https://cdn.gsmarena.com/imgroot/reviews/21/xiaomi-mi-11-lite/lifestyle/-1200/gsmarena_001.jpg",
+      "images": [
+        "https://phonesdata.com/files/models/Xiaomi-Mi-11-Lite-453.jpg",
+        "https://xiaomi.reviews/wp-content/uploads/2021/05/xiaomi-mi-11-lite-procesador-2048x2048.jpg",
+        "https://welectronics.com/images/stories/virtuemart/product/citrusyellow836.png"
+      ],
+      "createdAt": "2024-02-15T10:00:00.000Z",
+      "updatedAt": "2024-03-25T09:45:00.000Z"
+    },
+    {
+      "name": "Tas Ransel Pria Multifungsi Waterproof",
+      "slug": "tas-ransel-pria-multifungsi-waterproof",
+      "description": "Tas ransel pria multifungsi dengan material waterproof yang tahan air. Cocok digunakan untuk aktivitas sehari-hari maupun traveling.",
+      "excerpt": "Tas ransel pria multifungsi waterproof",
+      "price": 350000,
+      "tags": ["fashion", "tas", "ransel", "pria"],
+      "thumbnail": "https://s2.bukalapak.com/img/2620044481/large/Tas_Ransel_Gunung_Mountaineering_60L.jpg",
+      "images": [
+        "https://s0.bukalapak.com/img/00932764031/w-1000/Tas_Ransel_Pria_Waterproof_Murah_Premium_Original_Distro___T.jpg",
+        "https://th.bing.com/th/id/OIP.KXonwn5_l20-4Eh9Ah7WbwHaFv?rs=1&pid=ImgDetMain",
+        "https://s2.bukalapak.com/img/2620044481/large/Tas_Ransel_Gunung_Mountaineering_60L.jpg"
+      ],
+      "createdAt": "2024-02-10T08:00:00.000Z",
+      "updatedAt": "2024-03-25T14:30:00.000Z"
+    },
+    {
+      "name": "Sepatu Sneakers Casual Pria",
+      "slug": "sepatu-sneakers-casual-pria",
+      "description": "Sepatu sneakers casual pria dengan desain stylish dan nyaman dipakai sehari-hari. Tersedia dalam berbagai ukuran.",
+      "excerpt": "Sepatu sneakers casual pria",
+      "price": 250000,
+      "tags": ["fashion", "sepatu", "sneakers", "pria"],
+      "thumbnail": "https://cf.shopee.co.id/file/2fae5b4d5eba7442817afc5fe26eca0c",
+      "images": [
+        "https://cf.shopee.co.id/file/2fae5b4d5eba7442817afc5fe26eca0c",
+        "https://cf.shopee.co.id/file/989484d12ab3f1a01cbe32362f90331e",
+        "https://th.bing.com/th/id/OIP.4-jNdLEp1mCAkPLTZqvgnAHaHa?rs=1&pid=ImgDetMain"
+      ],
+      "createdAt": "2024-01-20T10:00:00.000Z",
+      "updatedAt": "2024-03-28T11:45:00.000Z"
+    },
+    {
+      "name": "Samsung 65 Inch QLED Smart TV",
+      "slug": "samsung-65-inch-qled-smart-tv",
+      "description": "Samsung 65 Inch QLED Smart TV with Quantum Dot technology for vibrant and lifelike colors. Features smart TV functionality for streaming your favorite shows and movies.",
+      "excerpt": "Samsung 65 Inch QLED Smart TV",
+      "price": 15999999,
+      "tags": ["electronics", "tv", "samsung", "qled"],
+      "thumbnail": "https://th.bing.com/th/id/OIP.RC-IsYXYAF9Wy7LjtpvyfwHaHF?rs=1&pid=ImgDetMain",
+      "images": [
+        "https://electronicscentre.com.au/wp-content/uploads/2020/09/samsung-75-inch-4k-qled-smart-tv-qa75q70t-fd6-768x768.jpg",
+        "https://microless.com/cdn/products/53a99f67993e5ddcd1cf198bf4f53d2c-hi.jpg",
+        "https://data.clickforshop.it/imgprodotto/samsung-qe65q8camt-tv-qled-65-curvo-4k-ultra-hd-smart-tv-wi-fi-classe-a-argento_182868_zoom.jpg"
+      ],
+      "createdAt": "2024-03-10T12:00:00.000Z",
+      "updatedAt": "2024-03-30T08:30:00.000Z"
+    },
+    {
+      "name": "Apple MacBook Pro 13-inch",
+      "slug": "apple-macbook-pro-13-inch",
+      "description": "Apple MacBook Pro 13-inch with M1 chip for blazing-fast performance. Features a Retina display, Touch Bar, and up to 16GB of unified memory.",
+      "excerpt": "Apple MacBook Pro 13-inch",
+      "price": 20990000,
+      "tags": ["electronics", "laptop", "apple", "macbook pro"],
+      "thumbnail": "https://s.yimg.com/os/creatr-uploaded-images/2020-12/d37e0460-3eeb-11eb-b7f9-449e864b9135",
+      "images": [
+        "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mbp-silver-select-202011?wid=904&hei=840&fmt=jpeg&qlt=80&.v=1613672894000",
+        "https://techcrunch.com/wp-content/uploads/2020/05/00100trPORTRAIT_00100_BURST20200506153826467_COVER.jpg?resize=1536",
+        "https://s.yimg.com/os/creatr-uploaded-images/2020-12/d37e0460-3eeb-11eb-b7f9-449e864b9135"
+      ],
+      "createdAt": "2024-02-25T09:00:00.000Z",
+      "updatedAt": "2024-03-28T11:45:00.000Z"
+    },
+    {
+      "name": "Sony PlayStation 5 Console",
+      "slug": "sony-playstation-5-console",
+      "description": "Sony PlayStation 5 Console with 4K gaming support and high-speed SSD for faster load times. Experience immersive gaming with the new DualSense controller.",
+      "excerpt": "Sony PlayStation 5 Console",
+      "price": 6499000,
+      "tags": ["electronics", "gaming", "playstation", "sony"],
+      "thumbnail": "https://th.bing.com/th/id/OIP.kaxrMzXTvyL-6Q-hLoiNGwHaHa?w=1400&h=1400&rs=1&pid=ImgDetMain",
+      "images": [
+        "https://cdn1.smartprix.com/rx-iONR62zZ0-w1200-h1200/ONR62zZ0.jpg",
+        "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6430/6430161cv13d.jpg",
+        "https://th.bing.com/th/id/OIP.kaxrMzXTvyL-6Q-hLoiNGwHaHa?w=1400&h=1400&rs=1&pid=ImgDetMain"
+      ],
+      "createdAt": "2024-03-15T08:00:00.000Z",
+      "updatedAt": "2024-03-30T08:30:00.000Z"
+    },
+    {
+      "name": "Canon EOS R5 Mirrorless Camera",
+      "slug": "canon-eos-r5-mirrorless-camera",
+      "description": "Canon EOS R5 Mirrorless Camera with 45MP full-frame sensor and 8K video recording capability. Features dual pixel CMOS AF II for fast and accurate autofocus.",
+      "excerpt": "Canon EOS R5 Mirrorless Camera",
+      "price": 56490000,
+      "tags": ["electronics", "camera", "canon", "mirrorless"],
+      "thumbnail": "https://www.thegate.ca/wp-content/uploads/2020/12/0J3A4118.jpg",
+      "images": [
+        "https://www.thegate.ca/wp-content/uploads/2020/12/0J3A4118.jpg",
+        "https://cdn.naturettl.com/wp-content/uploads/2020/07/09132011/6725453588-1024x768.jpg",
+        "https://www.techtoyreviews.com/wp-content/uploads/2020/07/canon-eos-r5-price.jpg"
+      ],
+      "createdAt": "2024-02-20T10:00:00.000Z",
+      "updatedAt": "2024-03-28T11:45:00.000Z"
+    },
+    {
+      "name": "Apple iPhone 13 Pro Max",
+      "slug": "apple-iphone-13-pro-max",
+      "description": "Apple iPhone 13 Pro Max with A15 Bionic chip and ProMotion display. Features a triple-camera system with advanced low-light performance.",
+      "excerpt": "Apple iPhone 13 Pro Max",
+      "price": 20499000,
+      "tags": ["electronics", "smartphone", "apple", "iphone 13"],
+      "thumbnail": "https://th.bing.com/th/id/OIP.ZexOj0l_uymbhkQ_lMvoBgHaJw?rs=1&pid=ImgDetMain",
+      "images": [
+        "https://th.bing.com/th/id/OIP.ZexOj0l_uymbhkQ_lMvoBgHaJw?rs=1&pid=ImgDetMain",
+        "https://th.bing.com/th/id/OIP.Ga89olgNEGV-86b623a_nQAAAA?rs=1&pid=ImgDetMain",
+        "https://www.phoneshock.it/wp-content/uploads/2022/03/LD0005936371_1.jpg"
+      ],
+      "createdAt": "2024-03-20T08:00:00.000Z",
+      "updatedAt": "2024-03-30T08:30:00.000Z"
+    },
+    {
+      "name": "DJI Mavic Air 2S Drone",
+      "slug": "dji-mavic-air-2s-drone",
+      "description": "DJI Mavic Air 2S Drone with 1-inch CMOS sensor and 5.4K video recording. Features OcuSync 3.0 for stable and long-range transmission.",
+      "excerpt": "DJI Mavic Air 2S Drone",
+      "price": 14990000,
+      "tags": ["electronics", "drone", "dji", "mavic air 2s"],
+      "thumbnail": "https://th.bing.com/th/id/OIP.JEr6TJb-2Efkj2SNK0EXGAAAAA?rs=1&pid=ImgDetMain",
+      "images": [
+        "https://dronexl.co/wp-content/uploads/2021/04/DJI-Air-2S-drone-official-announcement-0111-1536x1191.jpg",
+        "https://th.bing.com/th/id/OIP.JEr6TJb-2Efkj2SNK0EXGAAAAA?rs=1&pid=ImgDetMain",
+        "https://techstory.in/wp-content/uploads/2021/04/25.jpg"
+      ],
+      "createdAt": "2024-02-28T10:00:00.000Z",
+      "updatedAt": "2024-03-28T11:45:00.000Z"
+    },
+    {
+      "name": "Samsung 55 Inch QLED 4K Smart TV",
+      "slug": "samsung-55-inch-qled-4k-smart-tv",
+      "description": "Samsung 55 Inch QLED 4K Smart TV with Quantum Dot technology for stunning picture quality. Features smart TV functionality for streaming your favorite content.",
+      "excerpt": "Samsung 55 Inch QLED 4K Smart TV",
+      "price": 8499000,
+      "tags": ["electronics", "tv", "samsung", "qled", "4k"],
+      "thumbnail": "https://www.electrical-deals.co.uk/media/catalog/product/cache/1/image/1800x/040ec09b1e35df139433887a97daa66f/Q/E/QE55Q85R-left.jpg",
+      "images": [
+        "https://www.electrical-deals.co.uk/media/catalog/product/cache/1/image/1800x/040ec09b1e35df139433887a97daa66f/Q/E/QE55Q85R-left.jpg",
+        "https://cdn1.smartprix.com/rx-ipxGocluW-w1200-h1200/samsung-qn90a-55-inc.jpg",
+        "https://www.satking.de/media/image/71/b9/90/SAMSUNG_65QN85A_65_ZOLL_163CM_UHD_4K_NEO_QLED_TV_SATKING_02_65QN85A_NEO_QLED_TV_600x600@2x.jpg"
+      ],
+      "createdAt": "2024-03-05T08:00:00.000Z",
+      "updatedAt": "2024-03-30T08:30:00.000Z"
+    },
+    {
+      "name": "Samsung Galaxy Tab S8 Ultra",
+      "slug": "samsung-galaxy-tab-s8-ultra",
+      "description": "Samsung Galaxy Tab S8 Ultra with 14.6-inch Super AMOLED display and S Pen included. Features Snapdragon 8 Gen 1 processor and up to 16GB of RAM.",
+      "excerpt": "Samsung Galaxy Tab S8 Ultra",
+      "price": 19999000,
+      "tags": ["electronics", "tablet", "samsung", "galaxy tab s8"],
+      "thumbnail": "https://media.cnn.com/api/v1/images/stellar/prod/galaxy-tab-s8-ultra-lead.jpg?q=h_900,w_1601,x_0,y_0",
+      "images": [
+        "https://media.cnn.com/api/v1/images/stellar/prod/galaxy-tab-s8-ultra-lead.jpg?q=h_900,w_1601,x_0,y_0",
+        "https://sm.ign.com/ign_ap/gallery/s/samsung-ga/samsung-galaxy-tab-s8-ultra_r49f.jpg",
+        "https://www.ixbt.com/img/n1/news/2021/6/5/Samsung-Galaxy-Tab-S7-kupit-planshet_large.jpg"
+      ],
+      "createdAt": "2024-02-15T10:00:00.000Z",
+      "updatedAt": "2024-03-28T11:45:00.000Z"
+    },
+    {
+      "name": "Adidas Ultraboost 22 Running Shoes",
+      "slug": "adidas-ultraboost-22-running-shoes",
+      "description": "Adidas Ultraboost 22 Running Shoes with responsive cushioning and lightweight design for a comfortable run. Features Primeknit upper for a snug fit.",
+      "excerpt": "Adidas Ultraboost 22 Running Shoes",
+      "price": 2299000,
+      "tags": ["fashion", "shoes", "adidas", "running"],
+      "thumbnail": "https://www.tradeinn.com/f/13882/138822472/adidas-ultraboost-22-x-parley-running-shoes.jpg",
+      "images": [
+        "https://www.tradeinn.com/f/13882/138822472/adidas-ultraboost-22-x-parley-running-shoes.jpg",
+        "https://cdn.fleetfeet.com/assets/adidasultraboost.jpeg/dynamic:1-aspect:1.9047619047619-fit:cover-strategy:entropy/adidasultraboost--1200.jpg",
+        "https://www.tradeinn.com/f/13842/138429782_3/adidas-ultraboost-22-c.rdy-running-shoes.jpg"
+      ],
+      "createdAt": "2024-03-10T08:00:00.000Z",
+      "updatedAt": "2024-03-30T08:30:00.000Z"
+    },
+    {
+      "name": "Levi's 501 Original Fit Jeans",
+      "slug": "levis-501-original-fit-jeans",
+      "description": "Levi's 501 Original Fit Jeans with classic straight leg and button fly. Made from durable, heavyweight denim for a timeless look.",
+      "excerpt": "Levi's 501 Original Fit Jeans",
+      "price": 999000,
+      "tags": ["fashion", "jeans", "levis"],
+      "thumbnail": "https://th.bing.com/th/id/OIP.U5fmmrhf1nf1WwLZvMQHKQHaHa?rs=1&pid=ImgDetMain",
+      "images": [
+        "https://th.bing.com/th/id/OIP.U5fmmrhf1nf1WwLZvMQHKQHaHa?rs=1&pid=ImgDetMain",
+        "https://www.togged.com/images/products/xxlarge/14637599056250ee.jpg",
+        "https://m.media-amazon.com/images/I/913fQp-qCNL._AC_UL1500_.jpg"
+      ],
+      "createdAt": "2024-02-20T10:00:00.000Z",
+      "updatedAt": "2024-03-28T11:45:00.000Z"
+    },
+    {
+      "name": "IKEA Kallax Shelf Unit",
+      "slug": "ikea-kallax-shelf-unit",
+      "description": "The IKEA Kallax Shelf Unit is a versatile and stylish storage solution for your home. It features a simple and modern design with multiple compartments for storing books, decor items, and more. The unit is made of durable materials and is easy to assemble. Whether you use it as a bookshelf, room divider, or display unit, the Kallax Shelf Unit will add functionality and style to any room.",
+      "excerpt": "IKEA Kallax Shelf Unit",
+      "price": 999000,
+      "tags": ["furniture", "shelf", "ikea"],
+      "thumbnail": "https://www.ikea.com/au/en/images/products/kallax-shelving-unit-white-stained-oak-effect__0459252_pe606050_s5.jpg",
+      "images": [
+        "https://www.ikea.com/au/en/images/products/kallax-shelving-unit-white-stained-oak-effect__0459252_pe606050_s5.jpg",
+        "https://th.bing.com/th/id/R.dc059a350090fcd978916874f5e70254?rik=v9Arz1XKum2Qaw&riu=http%3a%2f%2fwww.ikea.com%2fie%2fen%2fimages%2fproducts%2fkallax-shelving-unit-with-4-inserts-high-gloss-grey-turquoise__0480305_pe618888_s5.jpg&ehk=BmZ3grnAU6xo%2bYJh0h3gMSlhVCCj1PBKEoTfGisloto%3d&risl=&pid=ImgRaw&r=0",
+        "https://www.ikea.com/es/en/images/products/kallax-shelving-unit-with-10-inserts-white-stained-oak-effect__0480309_pe618893_s5.jpg"
+      ],
+      "createdAt": "2024-03-05T08:00:00.000Z",
+      "updatedAt": "2024-03-30T08:30:00.000Z"
+    },
+    {
+      "name": "Herman Miller Aeron Chair",
+      "slug": "herman-miller-aeron-chair",
+      "description": "The Herman Miller Aeron Chair is an iconic and ergonomic office chair designed for comfort and support. It features a breathable mesh back, adjustable lumbar support, and tilt mechanism for personalized comfort. The chair is made of high-quality materials and is built to last. Whether you're working long hours at the office or gaming at home, the Aeron Chair will provide the comfort and support you need.",
+      "excerpt": "Herman Miller Aeron Chair",
+      "price": 13490000,
+      "tags": ["furniture", "chair", "herman miller"],
+      "thumbnail": "https://th.bing.com/th/id/OIP.d-Afy9gvEVXk4Sffq3iLRQHaHa?rs=1&pid=ImgDetMain",
+      "images": [
+        "https://th.bing.com/th/id/R.d7c1b67a58d14136619609c709928c7d?rik=FupXXxpJckwHgg&riu=http%3a%2f%2fnationalofficeinteriors.com%2fwp-content%2fuploads%2f2015%2f04%2fHerman-Miller-Aeron-B-Carbon-01.jpg&ehk=qRJ8npTO8eRKCg5NrXsq89cdS6z%2fRfn7R8d%2bGuuR8h8%3d&risl=&pid=ImgRaw&r=0",
+        "https://www.cosyoffices.com/wp-content/uploads/2017/02/Herman-Miller-Aeron-Fully-Loaded-with-Headrest.jpg",
+        "https://wsioffice.com/wp-content/uploads/2018/05/1464795165_2185300139_210270993_1908543781_3235527480_3878611476_aeron-chair-by-herman-miller-lumbar-carbon.jpg"
+      ],
+      "createdAt": "2024-02-15T10:00:00.000Z",
+      "updatedAt": "2024-03-28T11:45:00.000Z"
+    },
+    {
+      "name": "IKEA Malm Bed Frame",
+      "slug": "ikea-malm-bed-frame",
+      "description": "The IKEA Malm Bed Frame is a stylish and functional bed frame that will complement any bedroom decor. It features a low-profile design with clean lines and comes in a variety of finishes to suit your style. The bed frame is made of durable materials and is easy to assemble. Whether you're looking for a bed frame for your master bedroom or guest room, the Malm Bed Frame is a great choice.",
+      "excerpt": "IKEA Malm Bed Frame",
+      "price": 2999000,
+      "tags": ["furniture", "bed", "ikea"],
+      "thumbnail": "https://th.bing.com/th/id/OIP.f-y1aoF2V2h-Otu5xEZe7QHaHa?rs=1&pid=ImgDetMain",
+      "images": [
+        "https://th.bing.com/th/id/OIP.f-y1aoF2V2h-Otu5xEZe7QHaHa?rs=1&pid=ImgDetMain",
+        "https://www.ikea.com/gb/en/images/products/malm-bed-frame-high-grey-stained-luroey__0775049_pe756805_s5.jpg",
+        "https://www.ikea.com/ca/en/images/products/malm-bed-frame-high__0637598_PE698416_S5.JPG?f=xxxl"
+      ],
+      "createdAt": "2024-03-08T08:00:00.000Z",
+      "updatedAt": "2024-03-30T08:30:00.000Z"
+    },
+    {
+      "name": "Muji Acacia Wood Dining Table",
+      "slug": "muji-acacia-wood-dining-table",
+      "description": "The Muji Acacia Wood Dining Table is a beautiful and functional addition to any dining room. It features a solid acacia wood top with a natural finish that highlights the wood's grain. The table is sturdy and durable, perfect for family meals and gatherings. With its simple and elegant design, the Muji Dining Table will enhance the look of your dining area.",
+      "excerpt": "Muji Acacia Wood Dining Table",
+      "price": 7999000,
+      "tags": ["furniture", "dining table", "muji"],
+      "thumbnail": "https://th.bing.com/th/id/OIP.EQ6fImDK01d-6iPdPq2AMAHaHa?w=2500&h=2500&rs=1&pid=ImgDetMain",
+      "images": [
+        "https://th.bing.com/th/id/OIP.EQ6fImDK01d-6iPdPq2AMAHaHa?w=2500&h=2500&rs=1&pid=ImgDetMain",
+        "https://potteryworld.com/wp-content/uploads/2021/03/Acacia-Wood-Dining-Table-2.jpg",
+        "https://www.you.co/sg/wp-content/uploads/sites/2/2020/04/Zomo-Dining-Table.jpgg"
+      ],
+      "createdAt": "2024-02-25T10:00:00.000Z",
+      "updatedAt": "2024-03-28T11:45:00.000Z"
+    },
+    {
+      "name": "Lombok Rattan Armchair",
+      "slug": "lombok-rattan-armchair",
+      "description": "The Lombok Rattan Armchair is a stylish and comfortable armchair for your living room or patio. It features a sturdy rattan frame with a curved backrest and armrests for added comfort. The chair comes with a cushion for extra support and is perfect for relaxing with a book or enjoying a cup of tea. Add a touch of natural elegance to your home with the Lombok Rattan Armchair.",
+      "excerpt": "Lombok Rattan Armchair",
+      "price": 1899000,
+      "tags": ["furniture", "armchair", "rattan", "lombok"],
+      "thumbnail": "https://th.bing.com/th/id/OIP.1_saiLoyN4d0OSJtcBiY5gHaHa?rs=1&pid=ImgDetMain",
+      "images": [
+        "https://th.bing.com/th/id/OIP.1_saiLoyN4d0OSJtcBiY5gHaHa?rs=1&pid=ImgDetMain",
+        "https://upinteriors.com/image/object/144/lombok-rattan-lounge-chair-6-94906.jpg",
+        "https://upinteriors.com/image/object/144/lombok-rattan-lounge-chair-19-95225.jpg"
+      ],
+      "createdAt": "2024-02-10T10:00:00.000Z",
+      "updatedAt": "2024-03-28T11:45:00.000Z"
+    },
+    {
+      "name": "Nordic Minimalist Desk Lamp",
+      "slug": "nordic-minimalist-desk-lamp",
+      "description": "The Nordic Minimalist Desk Lamp is a sleek and modern lamp for your workspace. It features a minimalist design with a metal base and adjustable arm and head for directing light where you need it. The lamp is perfect for reading, studying, or working on your computer. Add a touch of style and functionality to your desk with the Nordic Minimalist Desk Lamp.",
+      "excerpt": "Nordic Minimalist Desk Lamp",
+      "price": 499000,
+      "tags": ["furniture", "lamp", "desk lamp", "minimalist"],
+      "thumbnail": "https://th.bing.com/th/id/OIP.IL8AZW3KapyS8gOoED6QFQHaJQ?rs=1&pid=ImgDetMain",
+      "images": [
+        "https://th.bing.com/th/id/OIP.IL8AZW3KapyS8gOoED6QFQHaJQ?rs=1&pid=ImgDetMain",
+        "https://i.pinimg.com/originals/9d/17/a5/9d17a59dd6bf0a41110f10b53eeccb15.jpg",
+        "https://cf.shopee.ph/file/4b8ab3723882f70a7bc9646db337351c"
+      ],
+      "createdAt": "2024-01-20T10:00:00.000Z",
+      "updatedAt": "2024-03-28T11:45:00.000Z"
+    },
+    {
+      "name": "Urban Outfitters Velvet Sofa",
+      "slug": "urban-outfitters-velvet-sofa",
+      "description": "The Urban Outfitters Velvet Sofa is a luxurious and stylish addition to any living room. It features a plush velvet upholstery with a tufted backrest and tapered wooden legs. The sofa is spacious enough to seat three people comfortably and is perfect for lounging or entertaining guests. With its elegant design and soft velvet fabric, the Urban Outfitters Velvet Sofa will elevate the look of your home.",
+      "excerpt": "Urban Outfitters Velvet Sofa",
+      "price": 10999000,
+      "tags": ["furniture", "sofa", "velvet", "urban outfitters"],
+      "thumbnail": "https://images.urbndata.com/is/image/UrbanOutfitters/39913801_032_b?$xlarge$&fit=constrain&qlt=80&wid=640",
+      "images": [
+        "https://images.urbndata.com/is/image/UrbanOutfitters/39913801_032_b?$xlarge$&fit=constrain&qlt=80&wid=640",
+        "https://s7d5.scene7.com/is/image/UrbanOutfitters/47092119_053_b?$xlarge$&fit=constrain&qlt=80&wid=683",
+        "https://imageseu.urbndata.com/is/image/UrbanOutfittersEU/0520556710065_030_b?$xlarge$&fit=constrain&qlt=80&wid=640"
+      ],
+      "createdAt": "2024-01-15T10:00:00.000Z",
+      "updatedAt": "2024-03-28T11:45:00.000Z"
+    }
+  ]
+}
